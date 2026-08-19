@@ -1,0 +1,11 @@
+{
+  "dataset_id": "NASA_SVS_LRO_SYNTHETIC_HAZARD",
+  "attached_at": "2026-08-19T21:41:39.592188+00:00",
+  "classification": "SYNTHETIC_DEMO",
+  "product_id": "RATIO_CONTROLLED_HAZARD_ON_NASA_SVS_4720",
+  "reference_image_compatibility": {
+    "status": "COMPARABLE",
+    "score": 0.974,
+    "reason": null
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "generated_at": "2026-08-19T21:16:38Z",
+  "config_sha256": "7c0a01980658bcdf054926eecf4c87c14c2746f4ed94ecd78b962bd3f76b5e8a",
+  "image_compatibility": {
+    "identical": {
+      "status": "COMPARABLE",
+      "compatibility_score": 1.0,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.0,
+      "regions": 0
+    },
+    "same_scene_different_resolution": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9995,
+      "analysis_dimensions": [
+        1043,
+        1200
+      ],
+      "resize_applied": true,
+      "suspicious_area_pct": 0.0,
+      "regions": 0
+    },
+    "same_scene_alteration_different_resolution": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9561,
+      "analysis_dimensions": [
+        1043,
+        1200
+      ],
+      "resize_applied": true,
+      "suspicious_area_pct": 0.8558,
+      "regions": 1,
+      "iou": 0.8848,
+      "dice": 0.9389
+    },
+    "same_scene_crop": {
+      "status": "REVIEW_COMPARABILITY",
+      "compatibility_score": 0.6067,
+      "analysis_dimensions": null,
+      "resize_applied": false,
+      "suspicious_area_pct": null,
+      "regions": 0
+    },
+    "completely_unrelated": {
+      "status": "INCOMPARABLE_IMAGES",
+      "compatibility_score": 0.058,
+      "analysis_dimensions": null,
+      "resize_applied": false,
+      "suspicious_area_pct": null,
+      "regions": 0
+    },
+    "unrelated_lunar_looking": {
+      "status": "REVIEW_COMPARABILITY",
+      "compatibility_score": 0.4841,
+      "analysis_dimensions": null,
+      "resize_applied": false,
+      "suspicious_area_pct": null,
+      "regions": 0
+    }
+  },
+  "alteration_movement": {
+    "top_left": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9795,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.5531,
+      "regions": 1,
+      "iou": 0.8669,
+      "dice": 0.9287
+    },
+    "top_right": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9794,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.5527,
+      "regions": 1,
+      "iou": 0.8675,
+      "dice": 0.929
+    },
+    "bottom_left": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9618,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.5539,
+      "regions": 1,
+      "iou": 0.8657,
+      "dice": 0.928
+    },
+    "bottom_right": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9623,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.5535,
+      "regions": 1,
+      "iou": 0.8663,
+      "dice": 0.9284
+    },
+    "center": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9559,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.5569,
+      "regions": 1,
+      "iou": 0.861,
+      "dice": 0.9253
+    }
+  },
+  "alteration_strength": {
+    "weak": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.974,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.5474,
+      "regions": 1,
+      "mean_score_in_ground_truth": 0.6615
+    },
+    "medium": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9635,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.5535,
+      "regions": 1,
+      "mean_score_in_ground_truth": 0.686
+    },
+    "strong": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9545,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.5573,
+      "regions": 1,
+      "mean_score_in_ground_truth": 0.6974
+    }
+  },
+  "legitimate_enhancements": {
+    "mild_sharpening": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9993,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.0,
+      "regions": 0
+    },
+    "mild_denoising": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9987,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.0,
+      "regions": 0
+    },
+    "moderate_contrast": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9989,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.0,
+      "regions": 0
+    },
+    "brightness": {
+      "status": "COMPARABLE",
+      "compatibility_score": 1.0,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.0,
+      "regions": 0
+    },
+    "mild_compression": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9973,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.0,
+      "regions": 0
+    }
+  },
+  "noise_robustness": {
+    "0.5": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.998,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.0,
+      "regions": 0
+    },
+    "1": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.996,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.0,
+      "regions": 0
+    },
+    "2": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.988,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.0,
+      "regions": 0
+    },
+    "4": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.932,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 0.0065,
+      "regions": 0
+    },
+    "8": {
+      "status": "COMPARABLE",
+      "compatibility_score": 0.8432,
+      "analysis_dimensions": [
+        512,
+        512
+      ],
+      "resize_applied": false,
+      "suspicious_area_pct": 90.9126,
+      "regions": 2
+    }
+  },
+  "determinism": {
+    "scientific_json_equal": true,
+    "visual_map_sha256_equal": true,
+    "mask_sha256_equal": true,
+    "intentional_differences": [
+      "analysis_id",
+      "created_at"
+    ]
+  },
+  "performance": {
+    "512": {
+      "upload_pair_ms": 20.652,
+      "normalization": 0.909,
+      "compatibility": 4.868,
+      "visual_analysis": 43.876,
+      "artifact_generation": 35.041,
+      "total": 90.155,
+      "status": "COMPARABLE",
+      "compatibility_score": 0.995,
+      "suspicious_area_pct": 0.127,
+      "regions": 1
+    },
+    "1024": {
+      "upload_pair_ms": 54.074,
+      "normalization": 2.997,
+      "compatibility": 6.748,
+      "visual_analysis": 257.458,
+      "artifact_generation": 55.546,
+      "total": 340.405,
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9955,
+      "suspicious_area_pct": 0.1122,
+      "regions": 1
+    },
+    "2048": {
+      "upload_pair_ms": 176.736,
+      "normalization": 31.788,
+      "compatibility": 16.476,
+      "visual_analysis": 1311.015,
+      "artifact_generation": 201.906,
+      "total": 1634.018,
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9949,
+      "suspicious_area_pct": 0.1114,
+      "regions": 1
+    },
+    "same_scene_different_dimensions": {
+      "upload_pair_ms": 62.331,
+      "normalization": 8.097,
+      "compatibility": 8.349,
+      "visual_analysis": 292.868,
+      "artifact_generation": 97.406,
+      "total": 429.945,
+      "status": "COMPARABLE",
+      "compatibility_score": 0.9995,
+      "suspicious_area_pct": 0.0,
+      "regions": 0
+    },
+    "incompatible_1024": {
+      "upload_pair_ms": 39.919,
+      "normalization": 3.672,
+      "compatibility": 7.411,
+      "visual_analysis": 0.0,
+      "artifact_generation": 0.001,
+      "total": 25.419,
+      "status": "INCOMPARABLE_IMAGES",
+      "compatibility_score": 0.0573,
+      "suspicious_area_pct": null,
+      "regions": 0
+    }
+  }
+}

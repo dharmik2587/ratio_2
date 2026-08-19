@@ -1,0 +1,149 @@
+{
+  "schema_version": "2.0",
+  "passport_id": "5111f01c982d477ea2f12c08913fb4c4",
+  "analysis_id": "27c907e14cf848f797afe15d31673e94",
+  "created_at": "2026-08-19T21:40:12.834613+00:00",
+  "original_hash": "b4a33ac8f09be8938cf095d9ace6a89c9f0bd509af417f4925eedf4d82fe479e",
+  "enhanced_hash": "a7558998c4cd38f40f61f9179cd9cf4f941e46b39bc6abc5de16bc95905deba0",
+  "dem_hash": "11908993dd4c1661c4cd604be3d1f3c0fd587ad05cb62e50fae6c8cd14ce4de5",
+  "dataset_id": "NASA_SVS_LRO_SYNTHETIC_HAZARD",
+  "product_id": "RATIO_CONTROLLED_HAZARD_ON_NASA_SVS_4720",
+  "dataset_classification": "SYNTHETIC_DEMO",
+  "analysis_version": "PHASE_2",
+  "software_version": "2.0.0",
+  "configuration": {
+    "schema_version": "2.0",
+    "visual": {
+      "min_meaningful_change": 0.34
+    },
+    "physical_support": {
+      "weights": {
+        "dem_support": 0.4,
+        "gradient_alignment": 0.3,
+        "hillshade_support": 0.15,
+        "local_relief_support": 0.15
+      },
+      "supported_threshold": 0.7,
+      "partial_threshold": 0.45,
+      "contradiction_threshold": 0.2,
+      "terrain_gradient_full_support": 0.2,
+      "local_relief_full_support_m": 100.0,
+      "gradient_epsilon": 0.0001
+    },
+    "reference": {
+      "unavailable_valid_fraction": 0.3,
+      "low_valid_fraction": 0.5,
+      "adequate_valid_fraction": 0.8,
+      "adequate_feature_pixels": 3.0,
+      "uncertain_feature_pixels": 1.5,
+      "quality_weights": {
+        "registration": 0.4,
+        "coverage": 0.35,
+        "resolution": 0.25
+      }
+    },
+    "registration": {
+      "high_rmse_px": 2.0,
+      "medium_rmse_px": 5.0,
+      "minimum_triangle_area_fraction": 0.001,
+      "minimal_fit_quality_cap": 0.85
+    },
+    "risk": {
+      "formula": "multiplicative_power_product",
+      "exponents": {
+        "visual_change": 1.0,
+        "lack_of_physical_support": 1.0,
+        "comparison_quality": 1.0,
+        "registration_quality": 1.0,
+        "reference_adequacy": 1.0
+      },
+      "review_threshold": 0.4,
+      "block_threshold": 0.7
+    },
+    "missions": {
+      "SCIENTIFIC_VISUALIZATION": {
+        "max_unsupported_risk": 0.7,
+        "min_physical_support": 0.2,
+        "min_reference_quality": 0.25,
+        "min_registration_quality": 0.3
+      },
+      "MAPPING": {
+        "max_unsupported_risk": 0.45,
+        "min_physical_support": 0.5,
+        "min_reference_quality": 0.6,
+        "min_registration_quality": 0.65
+      },
+      "HAZARD_ASSESSMENT": {
+        "max_unsupported_risk": 0.3,
+        "min_physical_support": 0.65,
+        "min_reference_quality": 0.75,
+        "min_registration_quality": 0.8
+      },
+      "ROUTE_PLANNING": {
+        "max_unsupported_risk": 0.2,
+        "min_physical_support": 0.75,
+        "min_reference_quality": 0.8,
+        "min_registration_quality": 0.85
+      }
+    }
+  },
+  "mission_profile": "ROUTE_PLANNING",
+  "registration": {
+    "method": "AUTO_METADATA",
+    "status": "REGISTRATION_SUCCESS",
+    "matrix": [
+      [
+        0.7025440313111546,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.7025440313111546,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "rmse_px": 0.0,
+    "max_error_px": 0.0,
+    "quality_score": 0.98,
+    "quality_label": "HIGH",
+    "image_points": [],
+    "reference_points": [],
+    "validation_basis": "MANIFEST_COMMON_FOOTPRINT",
+    "timestamp": "2026-08-19T21:40:12.738736+00:00"
+  },
+  "reference_resolution_m": 7580.83760603737,
+  "valid_data_percentage": [
+    100.0
+  ],
+  "visual_change": [
+    0.7512
+  ],
+  "physical_support": [
+    0.4412
+  ],
+  "unsupported_risk": [
+    0.3975
+  ],
+  "decision": {
+    "mission_profile": "ROUTE_PLANNING",
+    "decision": "NOT_SAFE",
+    "export_designation": "NOT_SAFE_FOR_NAVIGATION",
+    "reason_codes": [
+      "F01:PHYSICAL_SUPPORT_GATE_FAILED",
+      "F01:UNRESOLVED",
+      "F01:UNSUPPORTED_RISK_GATE_FAILED"
+    ]
+  },
+  "artifact_hashes": {
+    "difference_map.png": "769d65c4c16e30ef64080676a2e97a7fb50decb87972e620dc700a3994f53143",
+    "suspicious_mask.png": "ffa955f922b7ab62e8f6f9af2bda999e806ac6f5459706c6d123d6bc75d8bebb",
+    "annotated.png": "b180e9f41f6e3efb964055307cb3a35ad1a4aa196a673bf41cfb9f88769e8b7b"
+  },
+  "passport_sha256": "6c5c40b29333fe899b02ffaccc21ff4007351f64cb76a4b4211fd1953ea764c5"
+}

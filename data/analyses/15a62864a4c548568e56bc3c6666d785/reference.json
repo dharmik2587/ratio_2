@@ -1,0 +1,11 @@
+{
+  "dataset_id": "NASA_SVS_LRO_NEARSIDE_45",
+  "attached_at": "2026-08-19T21:38:29.469264+00:00",
+  "classification": "REAL",
+  "product_id": "NASA_SVS_4720_LROC_COLOR_2K_AND_LDEM4",
+  "reference_image_compatibility": {
+    "status": "COMPARABLE",
+    "score": 1.0,
+    "reason": null
+  }
+}

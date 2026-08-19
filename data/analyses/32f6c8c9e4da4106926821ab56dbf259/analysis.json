@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.1",
+  "id": "32f6c8c9e4da4106926821ab56dbf259",
+  "label": "QA benchmark 2048",
+  "status": "COMPARABLE",
+  "comparison_status": "COMPARABLE",
+  "created_at": "2026-08-19T21:16:42.659631+00:00",
+  "scope": "STAGE_1_VISUAL_EVIDENCE_ONLY",
+  "scientific_notice": "Detected changes are not classified as hallucinations and have not been checked against physical terrain evidence.",
+  "inputs": {
+    "original": {
+      "id": "3645d55a2b9a4f3594722282d3866cd7",
+      "filename": "2048-a.png",
+      "sha256": "3ddc231f0c2c6ee572276521746df1a32abfbf46fdc481516e032b465e137773",
+      "width": 2048,
+      "height": 2048,
+      "content_type": "image/png",
+      "uploaded_at": "2026-08-19T21:16:40.938179+00:00"
+    },
+    "enhanced": {
+      "id": "5652de14111140b3a35c53d807acdb94",
+      "filename": "2048-b.png",
+      "sha256": "847e70a0d937eee306157b451c0370131404dcc6fb542233abe4fa87243d32a7",
+      "width": 2048,
+      "height": 2048,
+      "content_type": "image/png",
+      "uploaded_at": "2026-08-19T21:16:41.025371+00:00"
+    }
+  },
+  "configuration": {
+    "schema_version": "1.0",
+    "visual_weights": {
+      "residual": 0.4,
+      "ssim_change": 0.25,
+      "edge_mismatch": 0.2,
+      "frequency_change": 0.15
+    },
+    "normalization": {
+      "residual_scale": 0.2,
+      "edge_scale": 0.35,
+      "frequency_percentile": 95.0
+    },
+    "detection": {
+      "suspicious_threshold": 0.34,
+      "morphology_kernel": 5,
+      "minimum_region_area_px": 36,
+      "maximum_regions": 50
+    },
+    "compatibility": {
+      "high_threshold": 0.7,
+      "low_threshold": 0.35,
+      "maximum_aspect_ratio_difference": 0.03,
+      "thumbnail_size": 192,
+      "weights": {
+        "structure_correlation": 0.4,
+        "coarse_ssim": 0.3,
+        "edge_correlation": 0.25,
+        "histogram_similarity": 0.05
+      }
+    },
+    "normalization_settings": {
+      "dimension_policy": "aspect_ratio_preserving",
+      "comparison_coordinate_system": "original_image_dimensions",
+      "downscale_interpolation": "INTER_AREA",
+      "upscale_interpolation": "INTER_CUBIC"
+    },
+    "dimension_policy": "reject"
+  },
+  "dimensions": {
+    "original_dimensions": [
+      2048,
+      2048
+    ],
+    "enhanced_dimensions": [
+      2048,
+      2048
+    ],
+    "analysis_dimensions": [
+      2048,
+      2048
+    ],
+    "resize_applied": false,
+    "resize_method": "none",
+    "aspect_ratio_difference": 0.0
+  },
+  "compatibility": {
+    "score": 0.9949,
+    "status": "HIGH",
+    "reason_code": null,
+    "component_scores": {
+      "structure_correlation": 0.9957,
+      "coarse_ssim": 0.9964,
+      "edge_correlation": 0.9912,
+      "histogram_similarity": 0.998
+    },
+    "disclaimer": "Visual correspondence estimate only; not semantic or geographic verification."
+  },
+  "metrics": {
+    "mean_visual_score": 0.0007,
+    "mean_absolute_residual": 0.0005,
+    "global_ssim": 0.9992,
+    "suspicious_area_pct": 0.1114,
+    "region_count": 1
+  },
+  "features": [
+    {
+      "id": "F01",
+      "bbox": [
+        1518,
+        514,
+        77,
+        77
+      ],
+      "area_px": 4674,
+      "area_pct": 0.1114,
+      "visual_score": 0.5917,
+      "residual_score": 0.9185,
+      "ssim_change": 0.6125,
+      "edge_mismatch": 0.1962,
+      "frequency_change": 0.2132,
+      "classification": "SUSPICIOUS_CHANGE"
+    }
+  ],
+  "artifacts": {
+    "difference_map": "/api/analyses/32f6c8c9e4da4106926821ab56dbf259/artifacts/difference_map.png",
+    "suspicious_mask": "/api/analyses/32f6c8c9e4da4106926821ab56dbf259/artifacts/suspicious_mask.png",
+    "annotated": "/api/analyses/32f6c8c9e4da4106926821ab56dbf259/artifacts/annotated.png"
+  },
+  "processing_times_ms": {
+    "normalization": 31.788,
+    "compatibility": 16.476,
+    "visual_analysis": 1311.015,
+    "artifact_generation": 201.906,
+    "total": 1634.018
+  },
+  "record_sha256": "e211d3fa5390a6065a78efe49ea15ca5889421f92f468d160899e55c31b3e4e3"
+}

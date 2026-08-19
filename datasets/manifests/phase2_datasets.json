@@ -1,0 +1,91 @@
+{
+  "schema_version": "2.0",
+  "entries": [
+    {
+      "id": "NASA_SVS_LRO_NEARSIDE_45",
+      "classification": "REAL",
+      "mission": "Lunar Reconnaissance Orbiter",
+      "instrument": "LROC WAC composite / LOLA",
+      "product_id": "NASA_SVS_4720_LROC_COLOR_2K_AND_LDEM4",
+      "data_type": "IMAGE_DEM_PAIR",
+      "source": "https://svs.gsfc.nasa.gov/4720",
+      "local_path": "datasets/real/derived/lola_ldem4_nearside_dem.tif",
+      "image_path": "datasets/real/derived/lroc_nearside_original.png",
+      "resolution_m_per_pixel": 7580.83760603737,
+      "coordinate_reference_system": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +R=1737400.0 +units=m +no_defs",
+      "acquisition_date": null,
+      "processing_level": "NASA SVS rendering assets; RATIO geographic crop",
+      "coverage": {
+        "longitude_deg": [
+          -45,
+          45
+        ],
+        "latitude_deg": [
+          -45,
+          45
+        ],
+        "common_footprint": true
+      },
+      "license_notes": "NASA SVS materials; source page credits apply. Usage constraints not independently adjudicated by RATIO.",
+      "description": "Real LRO-derived image composite and LOLA-derived elevation crop. The color asset is optimized for rendering, not a calibrated science image.",
+      "image_dimensions": [
+        512,
+        512
+      ],
+      "reference_dimensions": [
+        360,
+        360
+      ],
+      "metadata_alignment_reliable": true,
+      "illumination": null,
+      "hashes": {
+        "source_image_sha256": "f7130a1822681fa7512d7dcfd40db8c10b9ba4f06777910348698260ed7a2170",
+        "source_dem_sha256": "330afa2556a86fd05ac6ba2f912f246600fdade35de2a0d90593d50d07b01b65",
+        "derived_image_sha256": "b4a33ac8f09be8938cf095d9ace6a89c9f0bd509af417f4925eedf4d82fe479e",
+        "derived_dem_sha256": "11908993dd4c1661c4cd604be3d1f3c0fd587ad05cb62e50fae6c8cd14ce4de5"
+      }
+    },
+    {
+      "id": "NASA_SVS_LRO_SYNTHETIC_HAZARD",
+      "classification": "SYNTHETIC_DEMO",
+      "mission": "Lunar Reconnaissance Orbiter (base data)",
+      "instrument": "LROC WAC composite / LOLA",
+      "product_id": "RATIO_CONTROLLED_HAZARD_ON_NASA_SVS_4720",
+      "data_type": "IMAGE_DEM_PAIR",
+      "source": "https://svs.gsfc.nasa.gov/4720",
+      "local_path": "datasets/real/derived/lola_ldem4_nearside_dem.tif",
+      "image_path": "datasets/real/derived/lroc_nearside_synthetic_hazard.png",
+      "resolution_m_per_pixel": 7580.83760603737,
+      "coordinate_reference_system": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +R=1737400.0 +units=m +no_defs",
+      "acquisition_date": null,
+      "processing_level": "Synthetic visual alteration on real-data-derived crop",
+      "coverage": {
+        "longitude_deg": [
+          -45,
+          45
+        ],
+        "latitude_deg": [
+          -45,
+          45
+        ],
+        "common_footprint": true
+      },
+      "license_notes": "NASA base data with RATIO synthetic modification; not mission evidence.",
+      "description": "SYNTHETIC HAZARD DEMONSTRATION. Artificial visual structure is not present in the independent LOLA DEM.",
+      "image_dimensions": [
+        512,
+        512
+      ],
+      "reference_dimensions": [
+        360,
+        360
+      ],
+      "metadata_alignment_reliable": true,
+      "illumination": null,
+      "hashes": {
+        "derived_image_sha256": "a7558998c4cd38f40f61f9179cd9cf4f941e46b39bc6abc5de16bc95905deba0",
+        "derived_dem_sha256": "11908993dd4c1661c4cd604be3d1f3c0fd587ad05cb62e50fae6c8cd14ce4de5"
+      }
+    }
+  ]
+}

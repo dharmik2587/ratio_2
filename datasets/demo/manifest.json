@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "notice": "Procedurally generated synthetic visual test scenes; not lunar mission data.",
+  "seed": 20250820,
+  "base": "base.png",
+  "cases": [
+    {
+      "id": "clean",
+      "enhanced": "clean_enhancement.png",
+      "intent": "deterministic unsharp masking"
+    },
+    {
+      "id": "alteration",
+      "enhanced": "synthetic_alteration.png",
+      "intent": "controlled artificial circular terrain-like insertion"
+    },
+    {
+      "id": "low_change",
+      "enhanced": "low_change.png",
+      "intent": "small global intensity transform"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "method": "MANUAL_3_POINT",
+  "status": "REGISTRATION_SUCCESS",
+  "matrix": [
+    [
+      0.7022222222,
+      0.0,
+      -0.0666666667
+    ],
+    [
+      -0.0,
+      0.7022222222,
+      -0.0666666667
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "rmse_px": 0.0,
+  "max_error_px": 0.0,
+  "quality_score": 0.85,
+  "quality_label": "HIGH",
+  "image_points": [
+    [
+      30.0,
+      30.0
+    ],
+    [
+      480.0,
+      30.0
+    ],
+    [
+      30.0,
+      480.0
+    ]
+  ],
+  "reference_points": [
+    [
+      21.0,
+      21.0
+    ],
+    [
+      337.0,
+      21.0
+    ],
+    [
+      21.0,
+      337.0
+    ]
+  ],
+  "validation_basis": "MINIMAL_EXACT_FIT",
+  "timestamp": "2026-08-19T21:41:43.836869+00:00"
+}

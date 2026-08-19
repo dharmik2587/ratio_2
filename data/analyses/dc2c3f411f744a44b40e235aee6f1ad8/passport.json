@@ -1,0 +1,111 @@
+{
+  "schema_version": "2.0",
+  "passport_id": "235d4a83e954472188b04384e5b53d7e",
+  "analysis_id": "dc2c3f411f744a44b40e235aee6f1ad8",
+  "created_at": "2026-08-19T21:40:16.278275+00:00",
+  "original_hash": "b4a33ac8f09be8938cf095d9ace6a89c9f0bd509af417f4925eedf4d82fe479e",
+  "enhanced_hash": "a129df5f1d5dbb9bfb9196be6c8345ae08a085f77e1a6779074eabded7994490",
+  "dem_hash": null,
+  "dataset_id": null,
+  "product_id": null,
+  "dataset_classification": null,
+  "analysis_version": "PHASE_2",
+  "software_version": "2.0.0",
+  "configuration": {
+    "schema_version": "2.0",
+    "visual": {
+      "min_meaningful_change": 0.34
+    },
+    "physical_support": {
+      "weights": {
+        "dem_support": 0.4,
+        "gradient_alignment": 0.3,
+        "hillshade_support": 0.15,
+        "local_relief_support": 0.15
+      },
+      "supported_threshold": 0.7,
+      "partial_threshold": 0.45,
+      "contradiction_threshold": 0.2,
+      "terrain_gradient_full_support": 0.2,
+      "local_relief_full_support_m": 100.0,
+      "gradient_epsilon": 0.0001
+    },
+    "reference": {
+      "unavailable_valid_fraction": 0.3,
+      "low_valid_fraction": 0.5,
+      "adequate_valid_fraction": 0.8,
+      "adequate_feature_pixels": 3.0,
+      "uncertain_feature_pixels": 1.5,
+      "quality_weights": {
+        "registration": 0.4,
+        "coverage": 0.35,
+        "resolution": 0.25
+      }
+    },
+    "registration": {
+      "high_rmse_px": 2.0,
+      "medium_rmse_px": 5.0,
+      "minimum_triangle_area_fraction": 0.001,
+      "minimal_fit_quality_cap": 0.85
+    },
+    "risk": {
+      "formula": "multiplicative_power_product",
+      "exponents": {
+        "visual_change": 1.0,
+        "lack_of_physical_support": 1.0,
+        "comparison_quality": 1.0,
+        "registration_quality": 1.0,
+        "reference_adequacy": 1.0
+      },
+      "review_threshold": 0.4,
+      "block_threshold": 0.7
+    },
+    "missions": {
+      "SCIENTIFIC_VISUALIZATION": {
+        "max_unsupported_risk": 0.7,
+        "min_physical_support": 0.2,
+        "min_reference_quality": 0.25,
+        "min_registration_quality": 0.3
+      },
+      "MAPPING": {
+        "max_unsupported_risk": 0.45,
+        "min_physical_support": 0.5,
+        "min_reference_quality": 0.6,
+        "min_registration_quality": 0.65
+      },
+      "HAZARD_ASSESSMENT": {
+        "max_unsupported_risk": 0.3,
+        "min_physical_support": 0.65,
+        "min_reference_quality": 0.75,
+        "min_registration_quality": 0.8
+      },
+      "ROUTE_PLANNING": {
+        "max_unsupported_risk": 0.2,
+        "min_physical_support": 0.75,
+        "min_reference_quality": 0.8,
+        "min_registration_quality": 0.85
+      }
+    }
+  },
+  "mission_profile": "ROUTE_PLANNING",
+  "registration": null,
+  "reference_resolution_m": null,
+  "valid_data_percentage": [],
+  "visual_change": [],
+  "physical_support": [],
+  "unsupported_risk": [],
+  "decision": {
+    "mission_profile": "ROUTE_PLANNING",
+    "decision": "NO_SIGNIFICANT_CHANGE",
+    "export_designation": "SAFE_TO_EXPORT",
+    "reason_codes": [
+      "DEM_VERIFICATION_NOT_REQUIRED"
+    ]
+  },
+  "artifact_hashes": {
+    "difference_map.png": "64acd5bd9bd4e3d12091ce85179207ff08851d34ecee681b2901d1f193f2abf1",
+    "suspicious_mask.png": "c12dd0518fefc145c055e328d9031717998ec20edd539c96c1452fd916145405",
+    "annotated.png": "c045603419da497b849cd31fd5cb142dbef2b933e53c270f30290b0f0e53288c"
+  },
+  "passport_sha256": "5984539417732243dc4f0038003043a628c8edf624f6a944b189e25a28f40fe8"
+}

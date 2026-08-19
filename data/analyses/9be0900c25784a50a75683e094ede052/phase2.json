@@ -1,0 +1,128 @@
+{
+  "schema_version": "2.0",
+  "analysis_id": "9be0900c25784a50a75683e094ede052",
+  "created_at": "2026-08-19T21:39:42.080518+00:00",
+  "mission_profile": "MAPPING",
+  "comparison_status": "COMPARABLE",
+  "comparison_quality": 0.979,
+  "dem_verification_status": "REFERENCE_UNAVAILABLE",
+  "no_significant_change": false,
+  "visual_change_summary": {
+    "meaningful_region_count": 1,
+    "maximum_region_visual_change": 0.64
+  },
+  "dataset": null,
+  "registration": null,
+  "features": [
+    {
+      "feature_id": "F01",
+      "visual_change": 0.64,
+      "physical_support": null,
+      "unsupported_risk": null,
+      "comparison_quality": 0.979,
+      "registration_quality": 0.0,
+      "reference_quality": 0.0,
+      "reference_resolution": {
+        "meters_per_pixel": null,
+        "adequate_for_feature": false,
+        "status": "REFERENCE_UNAVAILABLE"
+      },
+      "valid_data_percentage": 0.0,
+      "coverage_status": "REFERENCE_UNAVAILABLE",
+      "support_components": {
+        "dem_support": null,
+        "gradient_alignment": null,
+        "hillshade_support": null,
+        "local_relief_support": null
+      },
+      "available_components": [],
+      "component_coverage_fraction": 0.0,
+      "status": "REFERENCE_UNAVAILABLE",
+      "reason_codes": [
+        "REFERENCE_UNAVAILABLE"
+      ],
+      "reference_bbox": []
+    }
+  ],
+  "policy": {
+    "mission_profile": "MAPPING",
+    "decision": "REVIEW_REQUIRED",
+    "export_designation": "REVIEW_REQUIRED",
+    "reason_codes": [
+      "F01:PHYSICAL_SUPPORT_GATE_FAILED",
+      "F01:REFERENCE_GATE_FAILED",
+      "F01:REFERENCE_UNAVAILABLE",
+      "F01:REGISTRATION_GATE_FAILED"
+    ]
+  },
+  "configuration": {
+    "schema_version": "2.0",
+    "visual": {
+      "min_meaningful_change": 0.34
+    },
+    "physical_support": {
+      "weights": {
+        "dem_support": 0.4,
+        "gradient_alignment": 0.3,
+        "hillshade_support": 0.15,
+        "local_relief_support": 0.15
+      },
+      "supported_threshold": 0.7,
+      "partial_threshold": 0.45,
+      "contradiction_threshold": 0.2,
+      "terrain_gradient_full_support": 0.2,
+      "local_relief_full_support_m": 100.0,
+      "gradient_epsilon": 0.0001
+    },
+    "reference": {
+      "unavailable_valid_fraction": 0.3,
+      "low_valid_fraction": 0.5,
+      "adequate_valid_fraction": 0.8,
+      "adequate_feature_pixels": 3.0,
+      "uncertain_feature_pixels": 1.5,
+      "quality_weights": {
+        "registration": 0.4,
+        "coverage": 0.35,
+        "resolution": 0.25
+      }
+    },
+    "registration": {
+      "high_rmse_px": 2.0,
+      "medium_rmse_px": 5.0,
+      "minimum_triangle_area_fraction": 0.001,
+      "minimal_fit_quality_cap": 0.85
+    },
+    "risk": {
+      "formula": "visual_change * (1 - physical_support) * comparison_quality * registration_quality * reference_adequacy",
+      "review_threshold": 0.4,
+      "block_threshold": 0.7
+    },
+    "missions": {
+      "SCIENTIFIC_VISUALIZATION": {
+        "max_unsupported_risk": 0.7,
+        "min_physical_support": 0.2,
+        "min_reference_quality": 0.25,
+        "min_registration_quality": 0.3
+      },
+      "MAPPING": {
+        "max_unsupported_risk": 0.45,
+        "min_physical_support": 0.5,
+        "min_reference_quality": 0.6,
+        "min_registration_quality": 0.65
+      },
+      "HAZARD_ASSESSMENT": {
+        "max_unsupported_risk": 0.3,
+        "min_physical_support": 0.65,
+        "min_reference_quality": 0.75,
+        "min_registration_quality": 0.8
+      },
+      "ROUTE_PLANNING": {
+        "max_unsupported_risk": 0.2,
+        "min_physical_support": 0.75,
+        "min_reference_quality": 0.8,
+        "min_registration_quality": 0.85
+      }
+    }
+  },
+  "artifacts": {}
+}

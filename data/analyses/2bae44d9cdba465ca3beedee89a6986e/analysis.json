@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.1",
+  "id": "2bae44d9cdba465ca3beedee89a6986e",
+  "label": null,
+  "status": "COMPARABLE",
+  "comparison_status": "COMPARABLE",
+  "created_at": "2026-08-19T21:41:43.002830+00:00",
+  "scope": "STAGE_1_VISUAL_EVIDENCE_ONLY",
+  "scientific_notice": "Detected changes are not classified as hallucinations and have not been checked against physical terrain evidence.",
+  "inputs": {
+    "original": {
+      "id": "22c4eb93f72b4f89a76714056b67fce5",
+      "filename": "x.png",
+      "sha256": "b4a33ac8f09be8938cf095d9ace6a89c9f0bd509af417f4925eedf4d82fe479e",
+      "width": 512,
+      "height": 512,
+      "content_type": "image/png",
+      "uploaded_at": "2026-08-19T21:41:42.859770+00:00"
+    },
+    "enhanced": {
+      "id": "477d5fe5fa4b4999b6dd51fc48b8317f",
+      "filename": "x.png",
+      "sha256": "86a738b8775684d4edf7a324366e70108c3131fc1ef15451207686045d821676",
+      "width": 600,
+      "height": 600,
+      "content_type": "image/png",
+      "uploaded_at": "2026-08-19T21:41:42.890106+00:00"
+    }
+  },
+  "configuration": {
+    "schema_version": "1.0",
+    "visual_weights": {
+      "residual": 0.4,
+      "ssim_change": 0.25,
+      "edge_mismatch": 0.2,
+      "frequency_change": 0.15
+    },
+    "normalization": {
+      "residual_scale": 0.2,
+      "edge_scale": 0.35,
+      "frequency_percentile": 95.0
+    },
+    "detection": {
+      "suspicious_threshold": 0.34,
+      "morphology_kernel": 5,
+      "minimum_region_area_px": 36,
+      "maximum_regions": 50
+    },
+    "compatibility": {
+      "high_threshold": 0.7,
+      "low_threshold": 0.35,
+      "maximum_aspect_ratio_difference": 0.03,
+      "thumbnail_size": 192,
+      "weights": {
+        "structure_correlation": 0.4,
+        "coarse_ssim": 0.3,
+        "edge_correlation": 0.25,
+        "histogram_similarity": 0.05
+      }
+    },
+    "normalization_settings": {
+      "dimension_policy": "aspect_ratio_preserving",
+      "comparison_coordinate_system": "original_image_dimensions",
+      "downscale_interpolation": "INTER_AREA",
+      "upscale_interpolation": "INTER_CUBIC"
+    },
+    "dimension_policy": "reject"
+  },
+  "dimensions": {
+    "original_dimensions": [
+      512,
+      512
+    ],
+    "enhanced_dimensions": [
+      600,
+      600
+    ],
+    "analysis_dimensions": [
+      512,
+      512
+    ],
+    "resize_applied": true,
+    "resize_method": "aspect_ratio_preserving_to_original_dimensions",
+    "aspect_ratio_difference": 0.0
+  },
+  "compatibility": {
+    "score": 0.9799,
+    "status": "HIGH",
+    "reason_code": null,
+    "component_scores": {
+      "structure_correlation": 0.9997,
+      "coarse_ssim": 0.9976,
+      "edge_correlation": 0.9227,
+      "histogram_similarity": 1.0
+    },
+    "disclaimer": "Visual correspondence estimate only; not semantic or geographic verification."
+  },
+  "metrics": {
+    "mean_visual_score": 0.1279,
+    "mean_absolute_residual": 0.0077,
+    "global_ssim": 0.9601,
+    "suspicious_area_pct": 0.0946,
+    "region_count": 3
+  },
+  "features": [
+    {
+      "id": "F01",
+      "bbox": [
+        425,
+        139,
+        10,
+        10
+      ],
+      "area_px": 70,
+      "area_pct": 0.0267,
+      "visual_score": 0.3611,
+      "residual_score": 0.1668,
+      "ssim_change": 0.131,
+      "edge_mismatch": 0.5582,
+      "frequency_change": 1.0,
+      "classification": "SUSPICIOUS_CHANGE"
+    },
+    {
+      "id": "F02",
+      "bbox": [
+        36,
+        426,
+        9,
+        9
+      ],
+      "area_px": 67,
+      "area_pct": 0.0256,
+      "visual_score": 0.3825,
+      "residual_score": 0.1839,
+      "ssim_change": 0.1605,
+      "edge_mismatch": 0.594,
+      "frequency_change": 1.0,
+      "classification": "SUSPICIOUS_CHANGE"
+    },
+    {
+      "id": "F03",
+      "bbox": [
+        314,
+        31,
+        7,
+        8
+      ],
+      "area_px": 36,
+      "area_pct": 0.0137,
+      "visual_score": 0.3907,
+      "residual_score": 0.2024,
+      "ssim_change": 0.111,
+      "edge_mismatch": 0.6601,
+      "frequency_change": 1.0,
+      "classification": "SUSPICIOUS_CHANGE"
+    }
+  ],
+  "artifacts": {
+    "difference_map": "/api/analyses/2bae44d9cdba465ca3beedee89a6986e/artifacts/difference_map.png",
+    "suspicious_mask": "/api/analyses/2bae44d9cdba465ca3beedee89a6986e/artifacts/suspicious_mask.png",
+    "annotated": "/api/analyses/2bae44d9cdba465ca3beedee89a6986e/artifacts/annotated.png"
+  },
+  "processing_times_ms": {
+    "normalization": 1.995,
+    "compatibility": 5.067,
+    "visual_analysis": 58.093,
+    "artifact_generation": 27.039,
+    "total": 109.707
+  },
+  "record_sha256": "dcbf6f820a728eec933b8cc4faeabd268dc4ce4f1a76281ab3ab85791d4b4a12"
+}

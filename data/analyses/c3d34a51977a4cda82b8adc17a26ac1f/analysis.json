@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.1",
+  "id": "c3d34a51977a4cda82b8adc17a26ac1f",
+  "label": "QA benchmark 512",
+  "status": "COMPARABLE",
+  "comparison_status": "COMPARABLE",
+  "created_at": "2026-08-19T21:16:39.053727+00:00",
+  "scope": "STAGE_1_VISUAL_EVIDENCE_ONLY",
+  "scientific_notice": "Detected changes are not classified as hallucinations and have not been checked against physical terrain evidence.",
+  "inputs": {
+    "original": {
+      "id": "7ae6f4c5d9a84c2c888d4569dccb1e2f",
+      "filename": "512-a.png",
+      "sha256": "133b7de11d33a7187cbde54b625087eeedaa8871ccc31a7e80e76895701a6610",
+      "width": 512,
+      "height": 512,
+      "content_type": "image/png",
+      "uploaded_at": "2026-08-19T21:16:38.957144+00:00"
+    },
+    "enhanced": {
+      "id": "3c6da0d875374bbc92aa4a9f24e577bc",
+      "filename": "512-b.png",
+      "sha256": "1ac10727cbee1bf31eb6bae2e43321978ef7d3d19b7450c1f5bd0e8430004eab",
+      "width": 512,
+      "height": 512,
+      "content_type": "image/png",
+      "uploaded_at": "2026-08-19T21:16:38.963356+00:00"
+    }
+  },
+  "configuration": {
+    "schema_version": "1.0",
+    "visual_weights": {
+      "residual": 0.4,
+      "ssim_change": 0.25,
+      "edge_mismatch": 0.2,
+      "frequency_change": 0.15
+    },
+    "normalization": {
+      "residual_scale": 0.2,
+      "edge_scale": 0.35,
+      "frequency_percentile": 95.0
+    },
+    "detection": {
+      "suspicious_threshold": 0.34,
+      "morphology_kernel": 5,
+      "minimum_region_area_px": 36,
+      "maximum_regions": 50
+    },
+    "compatibility": {
+      "high_threshold": 0.7,
+      "low_threshold": 0.35,
+      "maximum_aspect_ratio_difference": 0.03,
+      "thumbnail_size": 192,
+      "weights": {
+        "structure_correlation": 0.4,
+        "coarse_ssim": 0.3,
+        "edge_correlation": 0.25,
+        "histogram_similarity": 0.05
+      }
+    },
+    "normalization_settings": {
+      "dimension_policy": "aspect_ratio_preserving",
+      "comparison_coordinate_system": "original_image_dimensions",
+      "downscale_interpolation": "INTER_AREA",
+      "upscale_interpolation": "INTER_CUBIC"
+    },
+    "dimension_policy": "reject"
+  },
+  "dimensions": {
+    "original_dimensions": [
+      512,
+      512
+    ],
+    "enhanced_dimensions": [
+      512,
+      512
+    ],
+    "analysis_dimensions": [
+      512,
+      512
+    ],
+    "resize_applied": false,
+    "resize_method": "none",
+    "aspect_ratio_difference": 0.0
+  },
+  "compatibility": {
+    "score": 0.995,
+    "status": "HIGH",
+    "reason_code": null,
+    "component_scores": {
+      "structure_correlation": 0.9961,
+      "coarse_ssim": 0.9966,
+      "edge_correlation": 0.9906,
+      "histogram_similarity": 0.998
+    },
+    "disclaimer": "Visual correspondence estimate only; not semantic or geographic verification."
+  },
+  "metrics": {
+    "mean_visual_score": 0.0011,
+    "mean_absolute_residual": 0.0005,
+    "global_ssim": 0.9983,
+    "suspicious_area_pct": 0.127,
+    "region_count": 1
+  },
+  "features": [
+    {
+      "id": "F01",
+      "bbox": [
+        379,
+        128,
+        21,
+        21
+      ],
+      "area_px": 333,
+      "area_pct": 0.127,
+      "visual_score": 0.6965,
+      "residual_score": 0.7598,
+      "ssim_change": 0.8544,
+      "edge_mismatch": 0.5132,
+      "frequency_change": 0.5091,
+      "classification": "SUSPICIOUS_CHANGE"
+    }
+  ],
+  "artifacts": {
+    "difference_map": "/api/analyses/c3d34a51977a4cda82b8adc17a26ac1f/artifacts/difference_map.png",
+    "suspicious_mask": "/api/analyses/c3d34a51977a4cda82b8adc17a26ac1f/artifacts/suspicious_mask.png",
+    "annotated": "/api/analyses/c3d34a51977a4cda82b8adc17a26ac1f/artifacts/annotated.png"
+  },
+  "processing_times_ms": {
+    "normalization": 0.909,
+    "compatibility": 4.868,
+    "visual_analysis": 43.876,
+    "artifact_generation": 35.041,
+    "total": 90.155
+  },
+  "record_sha256": "e48865e3ed65fc3c98c436114fb210b4a76baeadf52b4f190e22f92502b65543"
+}

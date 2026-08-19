@@ -1,0 +1,182 @@
+{
+  "schema_version": "2.0",
+  "analysis_id": "423950e2602a4253bbc729fe1a280de0",
+  "created_at": "2026-08-19T21:34:24.848211+00:00",
+  "mission_profile": "ROUTE_PLANNING",
+  "comparison_status": "COMPARABLE",
+  "comparison_quality": 0.974,
+  "dem_verification_status": "COMPLETED",
+  "no_significant_change": false,
+  "visual_change_summary": {
+    "meaningful_region_count": 1,
+    "maximum_region_visual_change": 0.7512
+  },
+  "dataset": {
+    "id": "NASA_SVS_LRO_SYNTHETIC_HAZARD",
+    "classification": "SYNTHETIC_DEMO",
+    "mission": "Lunar Reconnaissance Orbiter (base data)",
+    "instrument": "LROC WAC composite / LOLA",
+    "product_id": "RATIO_CONTROLLED_HAZARD_ON_NASA_SVS_4720",
+    "source": "https://svs.gsfc.nasa.gov/4720",
+    "resolution_m_per_pixel": 7580.04,
+    "description": "SYNTHETIC HAZARD DEMONSTRATION. Artificial visual structure is not present in the independent LOLA DEM.",
+    "sha256": "11908993dd4c1661c4cd604be3d1f3c0fd587ad05cb62e50fae6c8cd14ce4de5"
+  },
+  "registration": {
+    "method": "AUTO_METADATA",
+    "status": "REGISTRATION_SUCCESS",
+    "matrix": [
+      [
+        0.7025440313111546,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.7025440313111546,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "rmse_px": 0.0,
+    "max_error_px": 0.0,
+    "quality_score": 0.98,
+    "quality_label": "HIGH",
+    "image_points": [],
+    "reference_points": [],
+    "validation_basis": "MANIFEST_COMMON_FOOTPRINT",
+    "timestamp": "2026-08-19T21:34:24.713228+00:00"
+  },
+  "features": [
+    {
+      "feature_id": "F01",
+      "visual_change": 0.7512,
+      "physical_support": 0.4412,
+      "unsupported_risk": 0.3975,
+      "comparison_quality": 0.974,
+      "registration_quality": 0.98,
+      "reference_quality": 0.992,
+      "reference_resolution": {
+        "meters_per_pixel": 7580.83760603737,
+        "feature_scale_m": 242586.803,
+        "resolution_ratio": 32.0,
+        "status": "REFERENCE_RESOLUTION_ADEQUATE",
+        "adequate_for_feature": true
+      },
+      "valid_data_percentage": 100.0,
+      "coverage_status": "HIGH_REFERENCE_COVERAGE",
+      "support_components": {
+        "dem_support": 0.0739,
+        "gradient_alignment": 0.6515,
+        "hillshade_support": null,
+        "local_relief_support": 1.0
+      },
+      "available_components": [
+        "dem_support",
+        "gradient_alignment",
+        "local_relief_support"
+      ],
+      "component_coverage_fraction": 0.85,
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "VISUAL_CHANGE_DETECTED",
+        "GRADIENT_ALIGNMENT_RESOLVED",
+        "HILLSHADE_COMPARISON_UNAVAILABLE",
+        "PHYSICAL_EVIDENCE_AMBIGUOUS"
+      ],
+      "reference_bbox": [
+        255,
+        86,
+        32,
+        33
+      ]
+    }
+  ],
+  "policy": {
+    "mission_profile": "ROUTE_PLANNING",
+    "decision": "NOT_SAFE",
+    "export_designation": "NOT_SAFE_FOR_NAVIGATION",
+    "reason_codes": [
+      "F01:PHYSICAL_SUPPORT_GATE_FAILED",
+      "F01:UNRESOLVED",
+      "F01:UNSUPPORTED_RISK_GATE_FAILED"
+    ]
+  },
+  "configuration": {
+    "schema_version": "2.0",
+    "visual": {
+      "min_meaningful_change": 0.34
+    },
+    "physical_support": {
+      "weights": {
+        "dem_support": 0.4,
+        "gradient_alignment": 0.3,
+        "hillshade_support": 0.15,
+        "local_relief_support": 0.15
+      },
+      "supported_threshold": 0.7,
+      "partial_threshold": 0.45,
+      "contradiction_threshold": 0.2,
+      "terrain_gradient_full_support": 0.2,
+      "local_relief_full_support_m": 100.0,
+      "gradient_epsilon": 0.0001
+    },
+    "reference": {
+      "unavailable_valid_fraction": 0.3,
+      "low_valid_fraction": 0.5,
+      "adequate_valid_fraction": 0.8,
+      "adequate_feature_pixels": 3.0,
+      "uncertain_feature_pixels": 1.5,
+      "quality_weights": {
+        "registration": 0.4,
+        "coverage": 0.35,
+        "resolution": 0.25
+      }
+    },
+    "registration": {
+      "high_rmse_px": 2.0,
+      "medium_rmse_px": 5.0,
+      "minimum_triangle_area_fraction": 0.001,
+      "minimal_fit_quality_cap": 0.85
+    },
+    "risk": {
+      "formula": "visual_change * (1 - physical_support) * comparison_quality * registration_quality * reference_adequacy",
+      "review_threshold": 0.4,
+      "block_threshold": 0.7
+    },
+    "missions": {
+      "SCIENTIFIC_VISUALIZATION": {
+        "max_unsupported_risk": 0.7,
+        "min_physical_support": 0.2,
+        "min_reference_quality": 0.25,
+        "min_registration_quality": 0.3
+      },
+      "MAPPING": {
+        "max_unsupported_risk": 0.45,
+        "min_physical_support": 0.5,
+        "min_reference_quality": 0.6,
+        "min_registration_quality": 0.65
+      },
+      "HAZARD_ASSESSMENT": {
+        "max_unsupported_risk": 0.3,
+        "min_physical_support": 0.65,
+        "min_reference_quality": 0.75,
+        "min_registration_quality": 0.8
+      },
+      "ROUTE_PLANNING": {
+        "max_unsupported_risk": 0.2,
+        "min_physical_support": 0.75,
+        "min_reference_quality": 0.8,
+        "min_registration_quality": 0.85
+      }
+    }
+  },
+  "artifacts": {
+    "dem": "/api/datasets/NASA_SVS_LRO_SYNTHETIC_HAZARD/preview?kind=dem",
+    "hillshade": "/api/datasets/NASA_SVS_LRO_SYNTHETIC_HAZARD/preview?kind=hillshade"
+  }
+}

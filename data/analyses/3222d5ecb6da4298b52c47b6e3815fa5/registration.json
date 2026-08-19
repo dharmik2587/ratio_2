@@ -1,0 +1,29 @@
+{
+  "method": "AUTO_METADATA",
+  "status": "REGISTRATION_SUCCESS",
+  "matrix": [
+    [
+      0.7025440313111546,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.7025440313111546,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "rmse_px": 0.0,
+  "max_error_px": 0.0,
+  "quality_score": 0.98,
+  "quality_label": "HIGH",
+  "image_points": [],
+  "reference_points": [],
+  "validation_basis": "MANIFEST_COMMON_FOOTPRINT",
+  "timestamp": "2026-08-19T21:37:04.915247+00:00"
+}

@@ -1,0 +1,360 @@
+{
+  "generated_at": "2026-08-19T21:41:43Z",
+  "passed": 27,
+  "failed": 0,
+  "matrix": [
+    {
+      "id": 1,
+      "case": "identical images",
+      "result": "PASS",
+      "actual": {
+        "status": "COMPARABLE",
+        "regions": 0,
+        "ssim": 1.0
+      }
+    },
+    {
+      "id": 2,
+      "case": "same scene different resolution",
+      "result": "PASS",
+      "actual": {
+        "status": "COMPARABLE",
+        "resize": true,
+        "compatibility": 0.9799
+      }
+    },
+    {
+      "id": 3,
+      "case": "same scene enhancement",
+      "result": "PASS",
+      "actual": {
+        "status": "COMPARABLE",
+        "regions": 0
+      }
+    },
+    {
+      "id": 4,
+      "case": "unrelated images",
+      "result": "PASS",
+      "actual": {
+        "status": "INCOMPARABLE_IMAGES",
+        "score": 0.0599
+      }
+    },
+    {
+      "id": 5,
+      "case": "unrelated lunar-looking view",
+      "result": "PASS",
+      "actual": {
+        "status": "INCOMPARABLE_IMAGES",
+        "score": 0.1033
+      }
+    },
+    {
+      "id": 6,
+      "case": "no significant change",
+      "result": "PASS",
+      "actual": {
+        "dem_status": "NOT_REQUIRED",
+        "decision": "NO_SIGNIFICANT_CHANGE"
+      }
+    },
+    {
+      "id": 7,
+      "case": "valid real lunar image + DEM",
+      "result": "PASS",
+      "actual": {
+        "dataset": "NASA_SVS_LRO_NEARSIDE_45",
+        "source": "NASA SVS 4720",
+        "clean_case": "NO_SIGNIFICANT_CHANGE"
+      }
+    },
+    {
+      "id": 8,
+      "case": "missing DEM/reference",
+      "result": "PASS",
+      "actual": {
+        "status": "REFERENCE_UNAVAILABLE"
+      }
+    },
+    {
+      "id": 9,
+      "case": "DEM nodata handling",
+      "result": "PASS",
+      "actual": {
+        "tested_by": "test_low_nodata_coverage_is_reference_unavailable"
+      }
+    },
+    {
+      "id": 10,
+      "case": "DEM too coarse",
+      "result": "PASS",
+      "actual": {
+        "tested_by": "test_too_coarse_reference_never_becomes_contradicted",
+        "expected": "REFERENCE_INADEQUATE"
+      }
+    },
+    {
+      "id": 11,
+      "case": "good auto-registration",
+      "result": "PASS",
+      "actual": {
+        "method": "AUTO_METADATA",
+        "quality": 0.98,
+        "reference_correspondence": {
+          "status": "COMPARABLE",
+          "score": 0.974,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": 12,
+      "case": "manual 3-point registration",
+      "result": "PASS",
+      "actual": {
+        "rmse_px": 0.0,
+        "quality": 0.85,
+        "basis": "MINIMAL_EXACT_FIT"
+      }
+    },
+    {
+      "id": 13,
+      "case": "bad manual control points",
+      "result": "PASS",
+      "actual": {
+        "http": 422,
+        "error": "DEGENERATE_CONTROL_POINTS"
+      }
+    },
+    {
+      "id": 14,
+      "case": "flat DEM",
+      "result": "PASS",
+      "actual": {
+        "max_slope_deg": 0.0,
+        "gradient_alignment": "UNRESOLVED"
+      }
+    },
+    {
+      "id": 15,
+      "case": "known planar slope",
+      "result": "PASS",
+      "actual": {
+        "gradient_x": 0.2,
+        "gradient_y": 0.1
+      }
+    },
+    {
+      "id": 16,
+      "case": "aligned gradient",
+      "result": "PASS",
+      "actual": {
+        "score": 1.0
+      }
+    },
+    {
+      "id": 17,
+      "case": "opposing gradient",
+      "result": "PASS",
+      "actual": {
+        "score": 1.0
+      }
+    },
+    {
+      "id": 18,
+      "case": "perpendicular gradient",
+      "result": "PASS",
+      "actual": {
+        "score": 0.0
+      }
+    },
+    {
+      "id": 19,
+      "case": "high visual/high support",
+      "result": "PASS",
+      "actual": {
+        "mission_profile": "ROUTE_PLANNING",
+        "decision": "SAFE_TO_EXPORT",
+        "export_designation": "ROUTE_PLANNING_CANDIDATE",
+        "reason_codes": [
+          "ALL_MANDATORY_GATES_PASSED"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "case": "high visual/low support",
+      "result": "PASS",
+      "actual": {
+        "physical_support": 0.4412,
+        "unsupported_risk": 0.3975,
+        "decision": "NOT_SAFE"
+      }
+    },
+    {
+      "id": 21,
+      "case": "low reference quality",
+      "result": "PASS",
+      "actual": {
+        "mission_profile": "ROUTE_PLANNING",
+        "decision": "REVIEW_REQUIRED",
+        "export_designation": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "F:PHYSICAL_SUPPORT_GATE_FAILED",
+          "F:REFERENCE_GATE_FAILED",
+          "F:REFERENCE_INADEQUATE",
+          "F:REGISTRATION_GATE_FAILED"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "case": "route-planning policy",
+      "result": "PASS",
+      "actual": {
+        "mission_profile": "ROUTE_PLANNING",
+        "decision": "NOT_SAFE",
+        "export_designation": "NOT_SAFE_FOR_NAVIGATION",
+        "reason_codes": [
+          "F01:PHYSICAL_SUPPORT_GATE_FAILED",
+          "F01:UNRESOLVED",
+          "F01:UNSUPPORTED_RISK_GATE_FAILED"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "case": "scientific visualization policy",
+      "result": "PASS",
+      "actual": {
+        "mission_profile": "SCIENTIFIC_VISUALIZATION",
+        "decision": "REVIEW_REQUIRED",
+        "export_designation": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "F01:UNRESOLVED"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "case": "export allowed",
+      "result": "PASS",
+      "actual": {
+        "http": 200,
+        "designation": "SAFE_TO_EXPORT"
+      }
+    },
+    {
+      "id": 25,
+      "case": "export blocked",
+      "result": "PASS",
+      "actual": {
+        "http": 409,
+        "error": "POLICY_BLOCKED_EXPORT"
+      }
+    },
+    {
+      "id": 26,
+      "case": "passport integrity",
+      "result": "PASS",
+      "actual": {
+        "sha256": "0e89dc01ac2ab76fd02008741d3717ddfa6f1a8bfb9d9e4caa44f0a4529163d6",
+        "dataset_id": "NASA_SVS_LRO_SYNTHETIC_HAZARD"
+      }
+    },
+    {
+      "id": 27,
+      "case": "Phase-1 regression suite",
+      "result": "PASS",
+      "actual": {
+        "pytest_total_including_phase2": 66,
+        "phase1_tests_preserved": true
+      }
+    }
+  ],
+  "physical_demo": {
+    "feature": {
+      "feature_id": "F01",
+      "visual_change": 0.7512,
+      "physical_support": 0.4412,
+      "unsupported_risk": 0.3975,
+      "comparison_quality": 0.974,
+      "registration_quality": 0.98,
+      "reference_quality": 0.992,
+      "reference_resolution": {
+        "meters_per_pixel": 7580.83760603737,
+        "feature_scale_m": 242586.803,
+        "resolution_ratio": 32.0,
+        "status": "REFERENCE_RESOLUTION_ADEQUATE",
+        "adequate_for_feature": true
+      },
+      "valid_data_percentage": 100.0,
+      "coverage_status": "HIGH_REFERENCE_COVERAGE",
+      "support_components": {
+        "dem_support": 0.0739,
+        "gradient_alignment": 0.6515,
+        "hillshade_support": null,
+        "local_relief_support": 1.0
+      },
+      "available_components": [
+        "dem_support",
+        "gradient_alignment",
+        "local_relief_support"
+      ],
+      "component_coverage_fraction": 0.85,
+      "status": "UNRESOLVED",
+      "reason_codes": [
+        "VISUAL_CHANGE_DETECTED",
+        "GRADIENT_ALIGNMENT_RESOLVED",
+        "HILLSHADE_COMPARISON_UNAVAILABLE",
+        "PHYSICAL_EVIDENCE_AMBIGUOUS"
+      ],
+      "reference_bbox": [
+        255,
+        86,
+        32,
+        33
+      ]
+    },
+    "registration": {
+      "method": "AUTO_METADATA",
+      "status": "REGISTRATION_SUCCESS",
+      "matrix": [
+        [
+          0.7025440313111546,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.7025440313111546,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rmse_px": 0.0,
+      "max_error_px": 0.0,
+      "quality_score": 0.98,
+      "quality_label": "HIGH",
+      "image_points": [],
+      "reference_points": [],
+      "validation_basis": "MANIFEST_COMMON_FOOTPRINT",
+      "timestamp": "2026-08-19T21:41:43.694042+00:00"
+    },
+    "policy": {
+      "mission_profile": "ROUTE_PLANNING",
+      "decision": "NOT_SAFE",
+      "export_designation": "NOT_SAFE_FOR_NAVIGATION",
+      "reason_codes": [
+        "F01:PHYSICAL_SUPPORT_GATE_FAILED",
+        "F01:UNRESOLVED",
+        "F01:UNSUPPORTED_RISK_GATE_FAILED"
+      ]
+    }
+  }
+}

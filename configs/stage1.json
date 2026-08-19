@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "visual_weights": {
+    "residual": 0.40,
+    "ssim_change": 0.25,
+    "edge_mismatch": 0.20,
+    "frequency_change": 0.15
+  },
+  "normalization": {
+    "residual_scale": 0.20,
+    "edge_scale": 0.35,
+    "frequency_percentile": 95.0
+  },
+  "detection": {
+    "suspicious_threshold": 0.34,
+    "morphology_kernel": 5,
+    "minimum_region_area_px": 36,
+    "maximum_regions": 50
+  },
+  "compatibility": {
+    "high_threshold": 0.70,
+    "low_threshold": 0.35,
+    "maximum_aspect_ratio_difference": 0.03,
+    "thumbnail_size": 192,
+    "weights": {
+      "structure_correlation": 0.40,
+      "coarse_ssim": 0.30,
+      "edge_correlation": 0.25,
+      "histogram_similarity": 0.05
+    }
+  },
+  "normalization_settings": {
+    "dimension_policy": "aspect_ratio_preserving",
+    "comparison_coordinate_system": "original_image_dimensions",
+    "downscale_interpolation": "INTER_AREA",
+    "upscale_interpolation": "INTER_CUBIC"
+  },
+  "dimension_policy": "reject"
+}
