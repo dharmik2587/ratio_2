@@ -4,4 +4,9 @@ __pycache__/
 .pytest_cache/
 frontend/node_modules/
 frontend/dist/
-.DS_Store
+.DS_Storefrontend/.e2e-chromium/
+frontend/test-results/
+frontend/playwright-report/
+frontend/tests/fixtures/*.png
+data/
+datasets/real/source/psr_site001_dem_5m.tif

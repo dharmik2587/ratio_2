@@ -6,7 +6,7 @@ import cv2,numpy as np
 from backend.app.core.config import ROOT,DATA_DIR
 from ratio_core.dem import load_dem,terrain_derivatives
 
-BUILTIN=ROOT/'datasets/manifests/phase2_datasets.json'; REGISTRY=DATA_DIR/'datasets/index.json'; REFERENCE_DIR=DATA_DIR/'references'
+BUILTIN=[ROOT/'datasets/manifests/phase2_datasets.json',ROOT/'datasets/manifests/phase3_datasets.json']; REGISTRY=DATA_DIR/'datasets/index.json'; REFERENCE_DIR=DATA_DIR/'references'
 REQUIRED={'id','mission','instrument','product_id','data_type','source','local_path','resolution_m_per_pixel','coordinate_reference_system','classification'}
 
 def _custom():
@@ -14,7 +14,10 @@ def _custom():
     return json.loads(REGISTRY.read_text()).get('entries',[])
 
 def list_datasets():
-    built=json.loads(BUILTIN.read_text()).get('entries',[]) if BUILTIN.exists() else []
+    built=[]
+    for manifest_path in BUILTIN:
+        if manifest_path.exists():
+            built.extend(json.loads(manifest_path.read_text()).get('entries',[]))
     result=[]
     for item in built+_custom():
         entry=dict(item);path=resolve_dataset_path(entry);entry['available']=path.exists()

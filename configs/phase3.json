@@ -1,0 +1,45 @@
+{
+  "schema_version": "3.0",
+  "phase3_note": "Additive Phase-3 configuration. Phase-1 (stage1.json) and Phase-2 (phase2.json) settings remain the frozen scientific defaults.",
+  "benchmark": {
+    "generation_version": "1.0.0",
+    "splits": {
+      "development": ["scene_alpha", "scene_beta"],
+      "validation": ["scene_gamma", "scene_delta"],
+      "held_out": ["scene_epsilon", "scene_zeta"]
+    },
+    "region_iou_threshold": 0.3,
+    "seeds_per_class": 4,
+    "min_meaningful_change": 0.34
+  },
+  "drift": {
+    "baseline_enhancer": "enhancer_v1",
+    "thresholds": {
+      "visual_change_rate": {"review": 20.0, "quarantine": 45.0, "review_abs": 0.02, "quarantine_abs": 0.05},
+      "suspicious_region_rate": {"review": 20.0, "quarantine": 45.0, "review_abs": 0.02, "quarantine_abs": 0.05},
+      "false_positive_rate": {"review": 15.0, "quarantine": 35.0, "review_abs": 0.01, "quarantine_abs": 0.05},
+      "false_negative_rate": {"review": 15.0, "quarantine": 35.0, "review_abs": 0.10, "quarantine_abs": 0.30},
+      "region_count_mean": {"review": 20.0, "quarantine": 400.0, "review_abs": 0.50, "quarantine_abs": 2.50},
+      "average_changed_area_pct": {"review": 20.0, "quarantine": 45.0, "review_abs": 0.05, "quarantine_abs": 0.25},
+      "policy_block_rate": {"review": 10.0, "quarantine": 25.0, "review_abs": 0.05, "quarantine_abs": 0.20}
+    }
+  },
+  "llm": {
+    "provider": "anthropic",
+    "endpoint": "https://api.anthropic.com/v1/messages",
+    "model": "claude-sonnet-4-5",
+    "max_tokens": 1200,
+    "timeout_seconds": 30,
+    "max_retries": 1,
+    "api_key_env": "RATIO_CLAUDE_API_KEY",
+    "temperature": 0
+  },
+  "navigator": {
+    "read_only": true,
+    "max_tool_calls_per_query": 6,
+    "audit_dir": "data/navigator_audit"
+  },
+  "registration": {
+    "max_validation_error_px": 20.0
+  }
+}

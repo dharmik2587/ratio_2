@@ -1,0 +1,70 @@
+{
+  "schema_version": "3.0",
+  "entries": [
+    {
+      "id": "LRO_LOLA_PSR_SITE001_5M",
+      "classification": "REAL",
+      "mission": "Lunar Reconnaissance Orbiter (per source repository attribution)",
+      "instrument": "LOLA (LDEM-derived site DEM; per source repository description)",
+      "product_id": "Site001PSR.tif (GlobalPathPlan repository)",
+      "data_type": "DEM",
+      "source": "https://github.com/fletcher-smith-ae/GlobalPathPlan",
+      "local_path": "datasets/real/derived/psr_site001_dem_crop.tif",
+      "resolution_m_per_pixel": 5.0,
+      "coordinate_reference_system": "PROJCS[\"unnamed\",GEOGCS[\"unnamed ellipse\",DATUM[\"unknown\",SPHEROID[\"unnamed\",1737400,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH]]",
+      "acquisition_date": null,
+      "processing_level": "Site-scale south-polar lunar DEM distributed in the source repository; derivation chain NOT documented in the source repository. RATIO applied a 320x320 pixel geographic crop only.",
+      "coverage": {
+        "note": "Lunar south-polar site region; footprint defined by source raster extent",
+        "common_footprint": false
+      },
+      "license_notes": "No license statement is provided in the source repository. Attribution preserved; verify redistribution terms with the source repository before reuse.",
+      "description": "REAL lunar-derived high-resolution reference (5 m/pixel). Used to demonstrate feature-scale terrain verification that the Phase-2 7.58 km/pixel LDEM crop cannot resolve. Provenance is limited: the source repository does not document the production chain.",
+      "reference_dimensions": [
+        320,
+        320
+      ],
+      "metadata_alignment_reliable": false,
+      "illumination": null,
+      "hashes": {
+        "source_sha256": "e6365857e96e9ba597898a498ae033840554b2b6e4b4c09889ef2438bce36262",
+        "derived_dem_sha256": "bcae9b758ccb688f887eb238c6c7f0323e6da2fa616e0ebcc02c2e2e92d3f221",
+        "rendered_input_sha256": "a11e8f1112f98afb6b0779ac3c23e102b046c6e08f255055bc1045d336de82c0"
+      },
+      "note": "REAL DEM, LIMITED PROVENANCE"
+    },
+    {
+      "id": "LRO_LOLA_PSR_SITE001_5M_SYNTH_HAZARD",
+      "classification": "SYNTHETIC_DEMO",
+      "mission": "Lunar Reconnaissance Orbiter (base data)",
+      "instrument": "LOLA (LDEM-derived site DEM; per source repository description)",
+      "product_id": "RATIO_SYNTH_HAZARD_ON_PSR_SITE001_RENDER",
+      "data_type": "DEM",
+      "source": "https://github.com/fletcher-smith-ae/GlobalPathPlan",
+      "local_path": "datasets/real/derived/psr_site001_dem_crop.tif",
+      "resolution_m_per_pixel": 5.0,
+      "coordinate_reference_system": "PROJCS[\"unnamed\",GEOGCS[\"unnamed ellipse\",DATUM[\"unknown\",SPHEROID[\"unnamed\",1737400,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH]]",
+      "acquisition_date": null,
+      "processing_level": "Synthetic visual alteration on a RATIO rendering of the REAL DEM",
+      "coverage": {
+        "note": "Lunar south-polar site region",
+        "common_footprint": false
+      },
+      "license_notes": "NASA-derived base data with RATIO synthetic modification; not mission evidence.",
+      "description": "SYNTHETIC_DEMO: artificial bright/dark disc painted on the shaded rendering; NOT present in the independent DEM.",
+      "reference_dimensions": [
+        320,
+        320
+      ],
+      "metadata_alignment_reliable": false,
+      "illumination": null,
+      "hashes": {
+        "source_sha256": "e6365857e96e9ba597898a498ae033840554b2b6e4b4c09889ef2438bce36262",
+        "derived_dem_sha256": "bcae9b758ccb688f887eb238c6c7f0323e6da2fa616e0ebcc02c2e2e92d3f221",
+        "modified_input_sha256": "85a5d5a240ad01edb0c8e5ca9d0fa66655c5bdef6ece1e564e6e8bc4c8c6cb34"
+      },
+      "note": "SYNTHETIC hazard on REAL high-res reference"
+    }
+  ],
+  "notice": "Phase-3 high-resolution real-data validation assets. Image inputs are RATIO renderings of a REAL DEM (DERIVED_RENDERING), never calibrated sensor observations."
+}

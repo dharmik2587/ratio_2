@@ -23,6 +23,13 @@ class ReferenceAttach(BaseModel):
 class AlignmentCreate(BaseModel):
     image_points: list[list[float]]
     reference_points: list[list[float]]
+    validation_image_points: list[list[float]] | None = None
+    validation_reference_points: list[list[float]] | None = None
 
 class VerifyRequest(BaseModel):
     mission_profile: str = "SCIENTIFIC_VISUALIZATION"
+
+class NavigatorQuery(BaseModel):
+    question: str
+    analysis_id: str | None = None
+    feature_id: str | None = None
