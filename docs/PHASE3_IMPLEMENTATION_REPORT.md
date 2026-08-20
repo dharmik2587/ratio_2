@@ -182,6 +182,8 @@ Executed 2026-08-20 on this repository:
 
 Phase-1 and Phase-2 tests were not deleted or weakened; the historical 66-test regression suite runs unchanged as part of the 137 (71 Phase-3 tests, including the filename-based prompt-injection case).
 
+Fresh-clone re-verification (2026-08-20, `git clone` of the pushed branch into an empty directory, full documented setup): 137/137 pytest, 27/27 Phase-2 matrix, 14/14 Phase-3 matrix (after E2E), 18/18 browser E2E, production build OK, 8/8 SIH demo cases. See `docs/RATIO_2_INTEGRATED_AUDIT_REPORT.md` §Clean-environment verification.
+
 ## SIH Demo Cases
 
 All eight cases run server-side from the real pipeline (nothing pre-scripted). Recorded outcomes:

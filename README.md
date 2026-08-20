@@ -77,6 +77,7 @@ Recorded results (see `docs/` for the full reports):
 - 14/14 Phase-3 acceptance-matrix cases
 - 18/18 Playwright browser E2E tests
 - production frontend build passed
+- all suites re-verified from a fresh `git clone` of the pushed branch (see the audit report)
 
 ## Phase-3 API additions
 

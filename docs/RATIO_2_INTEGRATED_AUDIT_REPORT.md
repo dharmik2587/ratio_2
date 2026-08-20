@@ -16,6 +16,21 @@ RATIO takes an image pair that AI has modified, traces exactly what changed, ind
 - Phase 3 (additive): `ratio_core/benchmark`, `ratio_core/explain`, `backend/app/services/{evidence_api,llm_client,navigator,benchmarks,demo}.py`, `configs/phase3.json`, `datasets/manifests/phase3_datasets.json`, new frontend pages/components, Playwright E2E.
 - Clean install verified: `python -m venv .venv && pip install -r requirements.txt` (Python 3.11.2) + `cd frontend && npm install && npm run build` — backend imports OK (44 routes), frontend production build ✓ (248 kB JS / 30 kB CSS).
 
+### Clean-environment verification (audit §50) — fresh clone
+
+Executed 2026-08-20 from a **fresh `git clone` of the pushed branch** (`arena/01a01c11-ratio-2`, commit `8fd1ee2`) into an empty directory — no workspace artifacts carried over:
+
+1. `python -m venv .venv && pip install -r requirements.txt` → OK
+2. `scripts/generate_demo_cases.py`, `scripts/prepare_phase2_demo.py`, `scripts/prepare_phase3_highres.py` (downloads the 5 m/px reference, sha256-verified) → OK
+3. `PYTHONPATH=. pytest -q` → **137/137**
+4. `scripts/phase2_acceptance.py` → **27/27**; `scripts/phase3_acceptance.py` → **14/14** (case I reported SKIPPED until the E2E suite had produced its results file — the matrix is honest about ordering; re-run after E2E → 14/14)
+5. `cd frontend && npm ci && npm run build` → OK
+6. `scripts/bootstrap_e2e_browser.sh` → Chromium 149.0.7827.0 (NSS/NSPR built from source in the sandbox)
+7. `npm run test:e2e` → **18/18** (~58 s; the suite is self-contained — the noise control image is generated in-process, no fixture files)
+8. `scripts/sih_demo.sh` → all 8 cases recorded with correct outcomes (case8 policy=NOT_SAFE intact)
+
+One analysis ID → one integrated report → one deterministic decision → one passport → one explanation, with no manual database editing, verified from zero.
+
 ## Phase 1
 
 - **Implementation:** IMPLEMENTED (frozen, unchanged).
