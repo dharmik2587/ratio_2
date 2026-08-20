@@ -10,10 +10,12 @@ export const IMAGES = {
   noise: path.join(process.cwd(), 'tests', 'fixtures', 'noise.png'),
 }
 
+// NOTE: each FileDrop card replaces its <input> with a preview once a file is
+// set, so inputs must be resolved per-card, not by global index.
 export async function uploadPair(page, original = IMAGES.original, enhanced = IMAGES.hazard) {
-  const inputs = page.locator('input[type="file"]')
-  await inputs.nth(0).setInputFiles(original)
-  await inputs.nth(1).setInputFiles(enhanced)
+  const cardInput = index => page.locator('.file-card').nth(index).locator('input[type="file"]')
+  await cardInput(0).setInputFiles(original)
+  await cardInput(1).setInputFiles(enhanced)
   await page.getByRole('button', { name: /VERIFY IMAGE PAIR/ }).click()
   await page.getByText('Visual evidence workspace').waitFor()
 }
