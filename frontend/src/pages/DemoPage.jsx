@@ -85,16 +85,19 @@ export default function DemoPage({ offline }) {
             <span>attached by the backend — the assistant cannot change it</span></div>
         </div>
       </div>}
-      {result.feature && <>
-        <div className={`decision-banner ${(result.policy?.decision || '').toLowerCase()}`}>
-          <div><small>MISSION DECISION · {result.policy?.mission_profile?.replaceAll('_', ' ')}</small>
-            <strong>{result.policy?.decision?.replaceAll('_', ' ')}</strong>
-            <span>{result.policy?.reason_codes?.join(' · ')}</span></div>
+      {result.policy && <>
+        <div className={`decision-banner ${(result.policy.decision || '').toLowerCase()}`}>
+          <div><small>MISSION DECISION · {result.policy.mission_profile?.replaceAll('_', ' ')}</small>
+            <strong>{result.policy.decision?.replaceAll('_', ' ')}</strong>
+            <span>{result.policy.reason_codes?.join(' · ')}</span></div>
           <div className="decision-actions">
+            {result.dem_verification_status === 'NOT_REQUIRED' && <span className="blocked-chip ok">DEM VERIFICATION NOT REQUIRED — FAST PATH</span>}
             {result.case === 'case2_synthetic_fake_boulder' && <span className="blocked-chip">EXPORT BLOCKED — 409</span>}
             {result.analysis_id && <a className="secondary small" href={`/api/analyses/${result.analysis_id}/download`}>ANALYSIS JSON</a>}
           </div>
         </div>
+      </>}
+      {result.feature && <>
         <div className="demo-visuals">
           {result.analysis_id && ['annotated', 'difference_map'].map(name =>
             <div key={name} className="image-panel"><div className="panel-title">

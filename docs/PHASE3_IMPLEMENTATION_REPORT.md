@@ -177,7 +177,7 @@ Executed 2026-08-20 on this repository:
 | pytest (Phase 1 frozen + Phase 2 frozen + Phase 3) | 137 | 137 | 0 | 0 |
 | Phase-2 acceptance matrix (`scripts/phase2_acceptance.py`) | 27 | 27 | 0 | 0 |
 | Phase-3 acceptance matrix (`scripts/phase3_acceptance.py`) | 14 | 14 | 0 | 0 |
-| Playwright browser E2E (`npm run test:e2e`) | 15 | 15 | 0 | 0 |
+| Playwright browser E2E (`npm run test:e2e`) | 18 | 18 | 0 | 0 |
 | Frontend production build (`npm run build`) | 1 | 1 | 0 | 0 |
 
 Phase-1 and Phase-2 tests were not deleted or weakened; the historical 66-test regression suite runs unchanged as part of the 137 (71 Phase-3 tests, including the filename-based prompt-injection case).

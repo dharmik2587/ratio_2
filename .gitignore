@@ -8,6 +8,5 @@ frontend/dist/
 frontend/.e2e-chromium/
 frontend/test-results/
 frontend/playwright-report/
-frontend/tests/fixtures/*.png
 data/
 datasets/real/source/psr_site001_dem_5m.tif

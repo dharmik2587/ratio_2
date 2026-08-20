@@ -50,8 +50,8 @@ RATIO takes an image pair that AI has modified, traces exactly what changed, ind
 - **Evidence API:** IMPLEMENTED — all 11 tool-style endpoints return controlled JSON; 404s structured; no raw DB access.
 - **Claude:** IMPLEMENTED with mock-verified success/failure paths; offline-verified fallback in this environment. System prompt contains all mandated guardrails; payloads are structured-only (no images — asserted by test); response schema-validated with one retry; state fields discarded.
 - **Evidence Navigator:** IMPLEMENTED — intent routing, tool whitelist, backend-attached decision, JSONL audit trail (38 recorded entries during audit), read-only.
-- **Browser E2E:** IMPLEMENTED — Playwright, 15/15 passed (~24 s), covering the full judge-facing route plus negative flows.
-- **Tests:** 71 Phase-3 pytest cases + 15 E2E + 14-case acceptance matrix — all passing.
+- **Browser E2E:** IMPLEMENTED — Playwright, 18/18 passed (~30 s fresh run), covering the full judge-facing route, the benchmark/governance dashboards, and negative flows. The suite is self-contained: the noise control image is generated in-process (no fixture files).
+- **Tests:** 71 Phase-3 pytest cases + 18 E2E + 14-case acceptance matrix — all passing.
 - **Verdict:** PASS.
 
 ## Integrated End-to-End Test

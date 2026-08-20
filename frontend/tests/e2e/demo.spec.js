@@ -20,6 +20,26 @@ test.describe('SIH demo mode — judge view', () => {
     await expect(page.locator('.demo-navigator-result')).toContainText(/NOT.?SAFE|REVIEW.?REQUIRED/)
   })
 
+  test('fast-path and bad-registration cases render their recorded statuses', async ({ page }) => {
+    await page.goto('/')
+    await page.getByText('SIH DEMO', { exact: true }).click()
+
+    // Case 1: legitimate enhancement → NO_SIGNIFICANT_CHANGE fast path
+    await page.locator('.demo-case', { hasText: 'Legitimate enhancement' }).click()
+    await page.getByRole('button', { name: /VERIFY LEGITIMATE ENHANCEMENT/ }).click()
+    await expect(page.locator('.decision-banner strong').first()).toBeVisible({ timeout: 60_000 })
+    await expect(page.locator('.decision-banner strong').first()).toContainText('NO SIGNIFICANT CHANGE')
+
+    // Case 4: bad registration → UNRESOLVED (never CONTRADICTED)
+    await page.locator('.demo-case', { hasText: 'Bad registration' }).click()
+    await page.getByRole('button', { name: /VERIFY BAD REGISTRATION/ }).click()
+    await expect(page.locator('.chain-title b')).toBeVisible({ timeout: 60_000 })
+    await expect(page.locator('.chain-title b')).toContainText('UNRESOLVED')
+    await expect(page.locator('.chain-title b')).not.toContainText('CONTRADICTED')
+    // the independent validation point caught the bad fit
+    await expect(page.locator('.chain-step').nth(2)).toContainText(/independent validation/)
+  })
+
   test('coarse DEM case shows REFERENCE_INADEQUATE, never contradicted', async ({ page }) => {
     await page.goto('/')
     await page.getByText('SIH DEMO', { exact: true }).click()

@@ -75,7 +75,7 @@ Recorded results (see `docs/` for the full reports):
 - 137/137 automated tests passed (66 frozen Phase-1/2 + 71 Phase-3)
 - 27/27 Phase-2 acceptance-matrix cases
 - 14/14 Phase-3 acceptance-matrix cases
-- 15/15 Playwright browser E2E tests
+- 18/18 Playwright browser E2E tests
 - production frontend build passed
 
 ## Phase-3 API additions

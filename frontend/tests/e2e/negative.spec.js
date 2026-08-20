@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { uploadPair, IMAGES } from './helpers'
+import { uploadPair, IMAGES, noiseFile } from './helpers'
 
 test.describe('RATIO comparability gate and negative flows', () => {
   test('24: incompatible image flow stays in the comparison gate — no change metrics', async ({ page }) => {
@@ -7,7 +7,7 @@ test.describe('RATIO comparability gate and negative flows', () => {
     // upload a real lunar scene against pure noise: the pair is not comparable
     const cardInput = index => page.locator('.file-card').nth(index).locator('input[type="file"]')
     await cardInput(0).setInputFiles(IMAGES.original)
-    await cardInput(1).setInputFiles(IMAGES.noise)
+    await cardInput(1).setInputFiles(noiseFile())
     await page.getByRole('button', { name: /VERIFY IMAGE PAIR/ }).click()
     // Phase-3 comparison gate panel (the improved guardrail UI)
     await expect(page.getByText('RATIO stopped analysis here.')).toBeVisible()
