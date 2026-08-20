@@ -5,3 +5,8 @@ __pycache__/
 frontend/node_modules/
 frontend/dist/
 .DS_Store
+frontend/.e2e-chromium/
+frontend/test-results/
+frontend/playwright-report/
+data/
+datasets/real/source/psr_site001_dem_5m.tif

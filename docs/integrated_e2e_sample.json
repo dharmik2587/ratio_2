@@ -1,0 +1,81 @@
+{
+  "analysis_id": "1080e4cd240b47449c6fdccedfec3fe7",
+  "comparison": {
+    "status": "COMPARABLE",
+    "compatibility_score": 0.974
+  },
+  "visual_evidence": {
+    "visual_change": 0.7512,
+    "suspicious_region_count": 1,
+    "suspicious_area": 0.6351
+  },
+  "registration": {
+    "method": "AUTO_METADATA",
+    "rmse_px": 0.0,
+    "validation_basis": "MANIFEST_COMMON_FOOTPRINT",
+    "validation_rmse_px": null,
+    "quality": 0.98
+  },
+  "reference": {
+    "classification": "SYNTHETIC_DEMO",
+    "resolution_m_per_pixel": 7580.83760603737,
+    "coverage_valid_pct": 100.0,
+    "adequacy": "REFERENCE_RESOLUTION_ADEQUATE"
+  },
+  "physical_evidence": {
+    "dem_support": 0.0739,
+    "gradient_alignment": 0.6515,
+    "hillshade_support": null,
+    "local_relief_support": 1.0,
+    "physical_support": 0.4412
+  },
+  "risk": {
+    "unsupported_risk": 0.3975,
+    "status": "UNRESOLVED"
+  },
+  "mission": {
+    "profile": "ROUTE_PLANNING",
+    "decision": "NOT_SAFE",
+    "reason_codes": [
+      "F01:PHYSICAL_SUPPORT_GATE_FAILED",
+      "F01:UNRESOLVED",
+      "F01:UNSUPPORTED_RISK_GATE_FAILED"
+    ]
+  },
+  "export": {
+    "allowed": false,
+    "http_status": 409,
+    "error": "POLICY_BLOCKED_EXPORT"
+  },
+  "passport": {
+    "passport_sha256": "a02afc222fdec26a\u2026",
+    "analysis_version": "PHASE_2",
+    "dataset_id": "NASA_SVS_LRO_SYNTHETIC_HAZARD",
+    "dem_hash": "11908993dd4c1661\u2026"
+  },
+  "explanation": {
+    "llm_used": false,
+    "fallback_used": true,
+    "policy_decision": "NOT_SAFE",
+    "executive_summary": "Feature F01 shows a visual change score of 0.751. Independent terrain evidence is unresolved with a physical support score of 0.441.",
+    "recommendation": "The configured mission policy for ROUTE PLANNING returned NOT_SAFE for this feature. This decision is deterministic and was not produced by the explanation layer."
+  },
+  "navigator": {
+    "intent": "why_feature",
+    "tools_called": [
+      "get_feature_evidence",
+      "get_mission_decision"
+    ],
+    "policy_decision": "NOT_SAFE",
+    "fallback_used": true
+  },
+  "timings_seconds": {
+    "phase1_analysis_upload_plus_analysis": 0.173,
+    "attach_reference": 0.079,
+    "verify_physical": 0.136,
+    "passport": 0.003,
+    "explain_offline": 0.003,
+    "export_attempt": 0.002,
+    "navigator_query": 0.004
+  }
+}
