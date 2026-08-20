@@ -19,7 +19,8 @@ PYEOF
 echo "== [2/5] regression suites"
 PYTHONPATH=. .venv/bin/pytest -q 2>&1 | tail -1
 PYTHONPATH=. .venv/bin/python scripts/phase2_acceptance.py >/dev/null && echo "    phase2 acceptance: 27/27"
-PYTHONPATH=. .venv/bin/python scripts/phase3_acceptance.py >/dev/null && echo "    phase3 acceptance: 14/14"
+PHASE3_RESULT="$(PYTHONPATH=. .venv/bin/python scripts/phase3_acceptance.py 2>/dev/null)"
+echo "    phase3 acceptance: ${PHASE3_RESULT:-see docs/phase3_acceptance_matrix.json}"
 
 echo "== [3/5] frontend production build"
 (cd frontend && npm run build >/dev/null 2>&1) && echo "    build OK"

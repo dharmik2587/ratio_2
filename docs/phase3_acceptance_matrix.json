@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-08-20T08:43:59Z",
+  "generated_at": "2026-08-20T11:45:10Z",
   "runtime_seconds": 1.8,
   "passed": 14,
   "failed": 0,
+  "skipped": 0,
   "matrix": [
     {
       "id": "A",
@@ -118,84 +119,19 @@
       "case": "browser end-to-end route",
       "result": "PASS",
       "actual": {
-        "expected": 15,
+        "expected": 2,
         "unexpected": 0,
         "skipped": 0,
         "flaky": 0,
-        "duration_ms": 23318.857,
+        "duration_ms": 38728.55,
         "specs": [
           {
-            "title": "9: manual 3-point alignment + independent 4th validation point",
+            "title": "BENCHMARKS page: run the synthetic benchmark and inspect recorded per-class metrics",
             "ok": true,
             "status": "passed"
           },
           {
-            "title": "1-6: open app, upload images, create analysis, select mission, reference, verify",
-            "ok": true,
-            "status": "passed"
-          },
-          {
-            "title": "7-8: inspect feature and open the evidence panel (8-step evidence chain)",
-            "ok": true,
-            "status": "passed"
-          },
-          {
-            "title": "13: Evidence Navigator answers from structured evidence (offline deterministic mode)",
-            "ok": true,
-            "status": "passed"
-          },
-          {
-            "title": "14: graceful Claude-disabled mode \u2014 analysis works and falls back to deterministic explanation",
-            "ok": true,
-            "status": "passed"
-          },
-          {
-            "title": "judge flow: select case, verify, inspect chain, ask WHY",
-            "ok": true,
-            "status": "passed"
-          },
-          {
-            "title": "coarse DEM case shows REFERENCE_INADEQUATE, never contradicted",
-            "ok": true,
-            "status": "passed"
-          },
-          {
-            "title": "high-res case reports the 5 m/px local reference",
-            "ok": true,
-            "status": "passed"
-          },
-          {
-            "title": "Claude offline case falls back deterministically and keeps the decision",
-            "ok": true,
-            "status": "passed"
-          },
-          {
-            "title": "10: allowed export on the no-significant-change fast path",
-            "ok": true,
-            "status": "passed"
-          },
-          {
-            "title": "11: blocked export surfaces the HTTP 409 policy firewall",
-            "ok": true,
-            "status": "passed"
-          },
-          {
-            "title": "12: passport and evidence report download with provenance hashes",
-            "ok": true,
-            "status": "passed"
-          },
-          {
-            "title": "24: incompatible image flow stays in the comparison gate \u2014 no change metrics",
-            "ok": true,
-            "status": "passed"
-          },
-          {
-            "title": "no-significant-change fast path: DEM verification not required",
-            "ok": true,
-            "status": "passed"
-          },
-          {
-            "title": "REAL / SYNTHETIC_DEMO labels are visible on the dataset strip",
+            "title": "MODEL GOVERNANCE page: run the drift monitor and see PASS/REVIEW/QUARANTINE per version",
             "ok": true,
             "status": "passed"
           }

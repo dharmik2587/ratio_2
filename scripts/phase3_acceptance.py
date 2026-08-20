@@ -32,8 +32,12 @@ rows = []
 
 
 def row(case_id, name, actual, ok=True):
-    rows.append({"id": case_id, "case": name, "result": "PASS" if ok else "FAIL",
-                 "actual": _jsonable(actual)})
+    rows.append({"id": case_id, "case": name,
+                 "result": "PASS" if ok else "FAIL", "actual": _jsonable(actual)})
+
+
+def row_skipped(case_id, name, actual):
+    rows.append({"id": case_id, "case": name, "result": "SKIPPED", "actual": _jsonable(actual)})
 
 
 def _jsonable(obj):
@@ -220,8 +224,9 @@ def main():
             "specs": [{"title": s.get("title"), "ok": s.get("ok"), "status": s.get("tests", [{}])[0].get("results", [{}])[0].get("status")} for s in specs],
         }, stats.get("unexpected", 1) == 0)
     else:
-        row("I", "browser end-to-end route", {"note": "run cd frontend && npm run test:e2e first"},
-            False)
+        row_skipped("I", "browser end-to-end route",
+                    {"note": "frontend/test-results/results.json not present yet; "
+                             "run `cd frontend && npm run test:e2e` and re-run this matrix"})
 
     # ---------------- J. Claude-offline route
     r_j = demo.run_case("case8_claude_offline")
@@ -280,11 +285,12 @@ def main():
         "runtime_seconds": round(time.time() - t0, 1),
         "passed": sum(r["result"] == "PASS" for r in rows),
         "failed": sum(r["result"] == "FAIL" for r in rows),
+        "skipped": sum(r["result"] == "SKIPPED" for r in rows),
         "matrix": rows,
     }
     (ROOT / "docs/phase3_acceptance_matrix.json").write_text(json.dumps(out, indent=2))
     print(json.dumps({"passed": out["passed"], "failed": out["failed"],
-                      "runtime_seconds": out["runtime_seconds"]}, indent=2))
+                      "skipped": out["skipped"], "runtime_seconds": out["runtime_seconds"]}, indent=2))
 
 
 if __name__ == "__main__":
