@@ -35,7 +35,8 @@ for case in demo.list_cases():
     if case["id"] == "case6_model_drift":
         detail = " | ".join(f"{c['candidate']}={c['decision']}" for c in r["comparisons"])
     elif case["id"] in ("case7_evidence_navigator", "case8_claude_offline"):
-        detail = f"fallback={r['fallback_used']} policy={r.get('policy_decision')}"
+        policy = r.get("policy_decision") or (r.get("scientific_state_intact") or {}).get("policy_decision")
+        detail = f"fallback={r['fallback_used']} policy={policy}"
     else:
         f = r.get("feature") or {}
         detail = f"status={f.get('status')} risk={f.get('unsupported_risk')} decision={(r.get('policy') or {}).get('decision')}"

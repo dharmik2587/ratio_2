@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-08-20T08:41:27Z",
+  "notes": [
+    "Prototype local storage; timings are best-of-N on this workspace.",
+    "No production-scale performance claims are implied."
+  ],
+  "results": [
+    {
+      "size_px": 256,
+      "phase1_analysis_ms": 16.9,
+      "regions_detected": 1,
+      "comparability": "COMPARABLE"
+    },
+    {
+      "size_px": 512,
+      "phase1_analysis_ms": 64.3,
+      "regions_detected": 1,
+      "comparability": "COMPARABLE"
+    },
+    {
+      "size_px": 1024,
+      "phase1_analysis_ms": 280.8,
+      "regions_detected": 1,
+      "comparability": "COMPARABLE"
+    },
+    {
+      "size_px": 2048,
+      "phase1_analysis_ms": 1182.3,
+      "regions_detected": 1,
+      "comparability": "COMPARABLE"
+    },
+    {
+      "size_px": 360,
+      "dataset": "phase2_ldem_360x360",
+      "dem_load_ms_cold": 21.3,
+      "terrain_derivatives_ms": 20.0
+    },
+    {
+      "size_px": 320,
+      "dataset": "phase3_psr_320x320_5m",
+      "dem_load_ms_cold": 7.2,
+      "terrain_derivatives_ms": 13.7
+    },
+    {
+      "size_px": 512,
+      "full_http_pipeline_ms": 345.1
+    }
+  ]
+}

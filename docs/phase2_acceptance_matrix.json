@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T08:33:44Z",
+  "generated_at": "2026-08-20T08:43:57Z",
   "passed": 27,
   "failed": 0,
   "matrix": [
@@ -259,7 +259,7 @@
       "case": "passport integrity",
       "result": "PASS",
       "actual": {
-        "sha256": "ed1474a2935b3053b281e7b7a97f40e05129aaff89a7d8f07c5a09ce407334bc",
+        "sha256": "0dec361c15986894f0d0b53894676a61013084c21fe6c5a37da44dfddf7ecf4b",
         "dataset_id": "NASA_SVS_LRO_SYNTHETIC_HAZARD"
       }
     },
@@ -344,7 +344,7 @@
       "image_points": [],
       "reference_points": [],
       "validation_basis": "MANIFEST_COMMON_FOOTPRINT",
-      "timestamp": "2026-08-20T08:33:44.024712+00:00",
+      "timestamp": "2026-08-20T08:43:57.084354+00:00",
       "fit_rmse_px": 0.0,
       "fit_max_error_px": 0.0,
       "fit_point_count": 0,

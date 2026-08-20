@@ -61,6 +61,7 @@ Open `http://localhost:5173`. API documentation is at `http://localhost:8000/doc
 
 ```bash
 PYTHONPATH=. pytest -q
+PYTHONPATH=. python scripts/phase3_performance_sweep.py   # optional timing sweep
 PYTHONPATH=. python scripts/phase2_acceptance.py
 PYTHONPATH=. python scripts/phase3_acceptance.py
 cd frontend && npm ci && npm run build
@@ -71,7 +72,7 @@ cd frontend && npm run test:e2e             # 15 browser tests
 
 Recorded results (see `docs/` for the full reports):
 
-- 136/136 automated tests passed (66 frozen Phase-1/2 + 70 Phase-3)
+- 137/137 automated tests passed (66 frozen Phase-1/2 + 71 Phase-3)
 - 27/27 Phase-2 acceptance-matrix cases
 - 14/14 Phase-3 acceptance-matrix cases
 - 15/15 Playwright browser E2E tests

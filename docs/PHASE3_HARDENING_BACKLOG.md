@@ -113,3 +113,32 @@ Not currently supported:
 - rover-scale hazard verification using the bundled 7.58 km/pixel DEM
 - calibrated mission-observation validation using the NASA SVS rendering composite
 - flight readiness or navigation certification
+
+---
+
+# Phase 3 status (2026-08-20): IMPLEMENTED AND ACCEPTED
+
+Every backlog item above is implemented and executed. Completion evidence lives in:
+
+- `docs/PHASE3_IMPLEMENTATION_REPORT.md` — architecture, capabilities, APIs, recorded benchmark/drift values
+- `docs/RATIO_2_INTEGRATED_AUDIT_REPORT.md` — independent re-run of every phase with actual outputs
+- `docs/phase3_acceptance_matrix.json` — 14/14 scientific acceptance cases (A–J + immutability + hallucination guard + 3B math)
+- `docs/integrated_e2e_sample.json` — full upload→decision→passport→explanation record
+- `docs/performance_sweep.json` — timing across 256/512/1024/2048 px pairs + DEM paths
+- `frontend/tests/e2e/` — 15/15 Playwright tests (bootstrap via `scripts/bootstrap_e2e_browser.sh`)
+
+## Priorities closed this phase
+
+| Priority | Status | Key artifact |
+|---|---|---|
+| 1 — calibrated high-resolution matched lunar image + DEM | DONE with documented provenance limits | 5 m/pixel REAL LOLA-derived polar DEM (`LRO_LOLA_PSR_SITE001_5M`, sha256-verified; image inputs are DERIVED_RENDERING, never called calibrated) |
+| 2 — independent registration validation point | DONE | `fit_affine_validated` (fit RMSE + independent validation residual/max error + HIGH/MEDIUM/LOW/INVALID) |
+| 3 — automated browser E2E | DONE | 15 Playwright tests incl. judge flow, export firewall, comparability gate, manual 3+1 alignment |
+| UI hardening — evidence reason chain | DONE | 8-step evidence chain in the console + demo judge view |
+
+## Known residual limitations (unchanged, by design)
+
+- The NASA SVS color asset remains a rendering composite, labeled as such.
+- The 5 m/px PSR DEM provenance is limited (source repository documents no derivation chain) — labeled REAL DEM, LIMITED PROVENANCE.
+- No perspective/camera-model registration; affine only.
+- Claude path verified with mock transports + offline fallback; a live-API run requires `RATIO_CLAUDE_API_KEY`.
