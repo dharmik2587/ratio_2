@@ -1,0 +1,268 @@
+{
+  "generated_at": "2026-08-20T08:32:08Z",
+  "runtime_seconds": 1.8,
+  "passed": 14,
+  "failed": 0,
+  "matrix": [
+    {
+      "id": "A",
+      "case": "high-resolution real-data case",
+      "result": "PASS",
+      "actual": {
+        "product_id": "Site001PSR.tif (GlobalPathPlan repository)",
+        "source": "https://github.com/fletcher-smith-ae/GlobalPathPlan",
+        "resolution_m_per_pixel": 5.0,
+        "crs_projected": true,
+        "valid_fraction": 1.0,
+        "elevation_range_m": [
+          1588.1,
+          1946.3
+        ],
+        "processing_level": "Site-scale south-polar lunar DEM distributed in the source repository; derivation chain NOT documented in the source rep",
+        "note": "REAL DEM, LIMITED PROVENANCE"
+      }
+    },
+    {
+      "id": "B",
+      "case": "synthetic unsupported feature",
+      "result": "PASS",
+      "actual": {
+        "visual_change": 0.7512,
+        "physical_support": 0.4412,
+        "unsupported_risk": 0.3975,
+        "status": "UNRESOLVED",
+        "policy_decision": "NOT_SAFE",
+        "export_blocked": true
+      }
+    },
+    {
+      "id": "C",
+      "case": "synthetic supported terrain-consistent feature (SYNTHETIC_PHYSICAL_CONSISTENCY_TEST)",
+      "result": "PASS",
+      "actual": {
+        "visual_change": 0.4984,
+        "physical_support": 0.8058,
+        "status": "SUPPORTED",
+        "dem_support": 1.0,
+        "gradient_alignment": 0.6637
+      }
+    },
+    {
+      "id": "D",
+      "case": "coarse-reference case",
+      "result": "PASS",
+      "actual": {
+        "reference_resolution_m_per_pixel": 160.0,
+        "feature_scale_m": 320.0,
+        "resolution_status": "REFERENCE_UNCERTAIN",
+        "physical_status": "REFERENCE_INADEQUATE",
+        "policy_decision": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "id": "E",
+      "case": "bad-registration case",
+      "result": "PASS",
+      "actual": {
+        "fit_rmse_px": 0.0,
+        "validation_residuals_px": [
+          145.0
+        ],
+        "validation_max_error_px": 145.0,
+        "registration_quality_label": "INVALID",
+        "physical_status": "UNRESOLVED",
+        "policy_decision": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "id": "F",
+      "case": "no-change case",
+      "result": "PASS",
+      "actual": {
+        "dem_verification_status": "NOT_REQUIRED",
+        "policy_decision": "NO_SIGNIFICANT_CHANGE"
+      }
+    },
+    {
+      "id": "G",
+      "case": "incompatible-input case",
+      "result": "PASS",
+      "actual": {
+        "comparison_status": "INCOMPARABLE_IMAGES",
+        "compatibility_status": "LOW",
+        "reason_code": "LOW_VISUAL_CORRESPONDENCE",
+        "metrics_generated": false,
+        "regions": 0
+      }
+    },
+    {
+      "id": "H",
+      "case": "gradient-alignment mathematical suite",
+      "result": "PASS",
+      "actual": {
+        "same_direction": 1.0,
+        "opposite_direction": 1.0,
+        "perpendicular": 0.0,
+        "zero_visual_gradient": [
+          null,
+          "GRADIENT_ALIGNMENT_UNRESOLVED"
+        ],
+        "zero_dem_gradient": [
+          null,
+          "GRADIENT_ALIGNMENT_UNRESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "I",
+      "case": "browser end-to-end route",
+      "result": "PASS",
+      "actual": {
+        "expected": 15,
+        "unexpected": 0,
+        "skipped": 0,
+        "flaky": 0,
+        "duration_ms": 24750.158,
+        "specs": [
+          {
+            "title": "9: manual 3-point alignment + independent 4th validation point",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "1-6: open app, upload images, create analysis, select mission, reference, verify",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "7-8: inspect feature and open the evidence panel (8-step evidence chain)",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "13: Evidence Navigator answers from structured evidence (offline deterministic mode)",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "14: graceful Claude-disabled mode \u2014 analysis works and falls back to deterministic explanation",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "judge flow: select case, verify, inspect chain, ask WHY",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "coarse DEM case shows REFERENCE_INADEQUATE, never contradicted",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "high-res case reports the 5 m/px local reference",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "Claude offline case falls back deterministically and keeps the decision",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "10: allowed export on the no-significant-change fast path",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "11: blocked export surfaces the HTTP 409 policy firewall",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "12: passport and evidence report download with provenance hashes",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "24: incompatible image flow stays in the comparison gate \u2014 no change metrics",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "no-significant-change fast path: DEM verification not required",
+            "ok": true,
+            "status": "passed"
+          },
+          {
+            "title": "REAL / SYNTHETIC_DEMO labels are visible on the dataset strip",
+            "ok": true,
+            "status": "passed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "J",
+      "case": "Claude-offline route",
+      "result": "PASS",
+      "actual": {
+        "llm_used": false,
+        "fallback_used": true,
+        "policy_decision": "NOT_SAFE",
+        "explanation_fields": [
+          "evidence_explanation",
+          "executive_summary",
+          "limitations",
+          "policy_decision",
+          "recommendation",
+          "risk_assessment"
+        ]
+      }
+    },
+    {
+      "id": "41",
+      "case": "policy immutability",
+      "result": "PASS",
+      "actual": {
+        "decision_before": "NOT_SAFE",
+        "decision_after": "NOT_SAFE",
+        "navigator_policy_decision": "NOT_SAFE",
+        "intent": "policy_immutability"
+      }
+    },
+    {
+      "id": "42",
+      "case": "user question cannot change scientific state",
+      "result": "PASS",
+      "actual": {
+        "policy_decision_after_question": "NOT_SAFE",
+        "risk_and_support_unchanged": true
+      }
+    },
+    {
+      "id": "43",
+      "case": "hallucination guard",
+      "result": "PASS",
+      "actual": {
+        "tools_called": [
+          "get_feature_evidence",
+          "get_mission_decision"
+        ],
+        "radar_claim_found": false
+      }
+    },
+    {
+      "id": "3B",
+      "case": "independent registration validation point",
+      "result": "PASS",
+      "actual": {
+        "good_fit_rmse": 0.0,
+        "good_validation_rmse": 1.4142,
+        "good_quality_label": "HIGH",
+        "bad_validation_max": 223.4457,
+        "bad_quality_label": "INVALID"
+      }
+    }
+  ]
+}

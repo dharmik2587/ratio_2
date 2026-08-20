@@ -1,0 +1,895 @@
+{
+  "benchmark": {
+    "report_id": "1175b6b87e16",
+    "generated_at": "2026-08-20T08:35:02.275979+00:00",
+    "data_classification": "MIXED",
+    "splits": {
+      "development": {
+        "total_samples": 120,
+        "classes": {
+          "fake_boulder": {
+            "hazard_type": "fake_boulder",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 8,
+            "missed": 0,
+            "false_alarms": 0,
+            "average_iou": 0.740638,
+            "median_iou": 0.743038,
+            "average_pixel_precision": 0.96039,
+            "average_pixel_recall": 0.887228,
+            "average_false_positive_rate": 0.000773
+          },
+          "resampling": {
+            "hazard_type": "resampling",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "false_depression": {
+            "hazard_type": "false_depression",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 7,
+            "missed": 1,
+            "false_alarms": 0,
+            "average_iou": 0.58883,
+            "median_iou": 0.668337,
+            "average_pixel_precision": 0.863649,
+            "average_pixel_recall": 0.875,
+            "average_false_positive_rate": 0.002433
+          },
+          "artificial_terrain_structure": {
+            "hazard_type": "artificial_terrain_structure",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 8,
+            "missed": 0,
+            "false_alarms": 0,
+            "average_iou": 0.730887,
+            "median_iou": 0.72761,
+            "average_pixel_precision": 0.935282,
+            "average_pixel_recall": 0.995568,
+            "average_false_positive_rate": 0.00153
+          },
+          "denoising": {
+            "hazard_type": "denoising",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "contrast_adjustment": {
+            "hazard_type": "contrast_adjustment",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "fake_ridge": {
+            "hazard_type": "fake_ridge",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 3,
+            "missed": 5,
+            "false_alarms": 0,
+            "average_iou": 0.279988,
+            "median_iou": 0.0,
+            "average_pixel_precision": 1.0,
+            "average_pixel_recall": 0.256858,
+            "average_false_positive_rate": 0.0
+          },
+          "mild_sharpening": {
+            "hazard_type": "mild_sharpening",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "fake_crater": {
+            "hazard_type": "fake_crater",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 7,
+            "missed": 1,
+            "false_alarms": 0,
+            "average_iou": 0.60451,
+            "median_iou": 0.690997,
+            "average_pixel_precision": 0.896984,
+            "average_pixel_recall": 0.869602,
+            "average_false_positive_rate": 0.003085
+          },
+          "sensor_noise": {
+            "hazard_type": "sensor_noise",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": 0.0,
+            "average_false_positive_rate": 0.0
+          },
+          "edge_exaggeration": {
+            "hazard_type": "edge_exaggeration",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": 0.0,
+            "median_iou": 0.0,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": 0.0,
+            "average_false_positive_rate": 0.0
+          },
+          "brightness_change": {
+            "hazard_type": "brightness_change",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "high_frequency_texture": {
+            "hazard_type": "high_frequency_texture",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 8,
+            "missed": 0,
+            "false_alarms": 0,
+            "average_iou": 0.77831,
+            "median_iou": 0.7745,
+            "average_pixel_precision": 0.985644,
+            "average_pixel_recall": 0.92446,
+            "average_false_positive_rate": 0.000288
+          },
+          "compression": {
+            "hazard_type": "compression",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "illumination_variation": {
+            "hazard_type": "illumination_variation",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          }
+        },
+        "aggregates": {
+          "total_samples": 120,
+          "hazard_samples": 56,
+          "benign_samples": 64,
+          "visual_change_region_rate": 0.341667,
+          "unsupported_candidate_rate": 0.341667,
+          "average_suspicious_area_pct": 0.803897,
+          "false_positive_rate": 0.00055,
+          "false_negative_rate": 0.172627,
+          "policy_block_rate": null
+        }
+      },
+      "validation": {
+        "total_samples": 120,
+        "classes": {
+          "fake_boulder": {
+            "hazard_type": "fake_boulder",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 8,
+            "missed": 0,
+            "false_alarms": 0,
+            "average_iou": 0.734853,
+            "median_iou": 0.737773,
+            "average_pixel_precision": 0.925828,
+            "average_pixel_recall": 1.0,
+            "average_false_positive_rate": 0.001073
+          },
+          "resampling": {
+            "hazard_type": "resampling",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "false_depression": {
+            "hazard_type": "false_depression",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 7,
+            "missed": 1,
+            "false_alarms": 0,
+            "average_iou": 0.558724,
+            "median_iou": 0.633782,
+            "average_pixel_precision": 0.830399,
+            "average_pixel_recall": 0.875,
+            "average_false_positive_rate": 0.001838
+          },
+          "artificial_terrain_structure": {
+            "hazard_type": "artificial_terrain_structure",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 8,
+            "missed": 0,
+            "false_alarms": 0,
+            "average_iou": 0.728874,
+            "median_iou": 0.735722,
+            "average_pixel_precision": 0.911255,
+            "average_pixel_recall": 0.995849,
+            "average_false_positive_rate": 0.001304
+          },
+          "denoising": {
+            "hazard_type": "denoising",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 4.2e-05
+          },
+          "contrast_adjustment": {
+            "hazard_type": "contrast_adjustment",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "fake_ridge": {
+            "hazard_type": "fake_ridge",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 6,
+            "missed": 2,
+            "false_alarms": 0,
+            "average_iou": 0.546849,
+            "median_iou": 0.720744,
+            "average_pixel_precision": 1.0,
+            "average_pixel_recall": 0.500821,
+            "average_false_positive_rate": 0.0
+          },
+          "mild_sharpening": {
+            "hazard_type": "mild_sharpening",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "fake_crater": {
+            "hazard_type": "fake_crater",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 7,
+            "missed": 1,
+            "false_alarms": 0,
+            "average_iou": 0.58023,
+            "median_iou": 0.663379,
+            "average_pixel_precision": 0.869457,
+            "average_pixel_recall": 0.875,
+            "average_false_positive_rate": 0.002416
+          },
+          "sensor_noise": {
+            "hazard_type": "sensor_noise",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": 0.0,
+            "average_false_positive_rate": 0.0
+          },
+          "edge_exaggeration": {
+            "hazard_type": "edge_exaggeration",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": 0.0,
+            "median_iou": 0.0,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": 0.0,
+            "average_false_positive_rate": 0.0
+          },
+          "brightness_change": {
+            "hazard_type": "brightness_change",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "high_frequency_texture": {
+            "hazard_type": "high_frequency_texture",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 8,
+            "missed": 0,
+            "false_alarms": 0,
+            "average_iou": 0.763444,
+            "median_iou": 0.759872,
+            "average_pixel_precision": 0.975929,
+            "average_pixel_recall": 0.958827,
+            "average_false_positive_rate": 0.000319
+          },
+          "compression": {
+            "hazard_type": "compression",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "illumination_variation": {
+            "hazard_type": "illumination_variation",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          }
+        },
+        "aggregates": {
+          "total_samples": 120,
+          "hazard_samples": 56,
+          "benign_samples": 64,
+          "visual_change_region_rate": 0.366667,
+          "unsupported_candidate_rate": 0.366667,
+          "average_suspicious_area_pct": 0.573769,
+          "false_positive_rate": 0.00047,
+          "false_negative_rate": 0.167033,
+          "policy_block_rate": null
+        }
+      },
+      "held_out": {
+        "total_samples": 136,
+        "classes": {
+          "fake_boulder": {
+            "hazard_type": "fake_boulder",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 12,
+            "detected": 12,
+            "missed": 0,
+            "false_alarms": 0,
+            "average_iou": 0.751751,
+            "median_iou": 0.746772,
+            "average_pixel_precision": 0.966526,
+            "average_pixel_recall": 0.829875,
+            "average_false_positive_rate": 0.000686
+          },
+          "resampling": {
+            "hazard_type": "resampling",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "false_depression": {
+            "hazard_type": "false_depression",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 7,
+            "missed": 1,
+            "false_alarms": 0,
+            "average_iou": 0.596083,
+            "median_iou": 0.675073,
+            "average_pixel_precision": 0.871326,
+            "average_pixel_recall": 0.875,
+            "average_false_positive_rate": 0.002398
+          },
+          "artificial_terrain_structure": {
+            "hazard_type": "artificial_terrain_structure",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 8,
+            "missed": 0,
+            "false_alarms": 0,
+            "average_iou": 0.72389,
+            "median_iou": 0.728409,
+            "average_pixel_precision": 0.930914,
+            "average_pixel_recall": 0.997252,
+            "average_false_positive_rate": 0.0016
+          },
+          "denoising": {
+            "hazard_type": "denoising",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "contrast_adjustment": {
+            "hazard_type": "contrast_adjustment",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "fake_ridge": {
+            "hazard_type": "fake_ridge",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 1,
+            "missed": 7,
+            "false_alarms": 0,
+            "average_iou": 0.089188,
+            "median_iou": 0.0,
+            "average_pixel_precision": 1.0,
+            "average_pixel_recall": 0.080634,
+            "average_false_positive_rate": 0.0
+          },
+          "mild_sharpening": {
+            "hazard_type": "mild_sharpening",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 12,
+            "detected": 0,
+            "missed": 12,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "fake_crater": {
+            "hazard_type": "fake_crater",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 12,
+            "detected": 11,
+            "missed": 1,
+            "false_alarms": 0,
+            "average_iou": 0.649785,
+            "median_iou": 0.703174,
+            "average_pixel_precision": 0.917148,
+            "average_pixel_recall": 0.916667,
+            "average_false_positive_rate": 0.002587
+          },
+          "sensor_noise": {
+            "hazard_type": "sensor_noise",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 12,
+            "detected": 0,
+            "missed": 12,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": 0.0,
+            "average_false_positive_rate": 0.0
+          },
+          "edge_exaggeration": {
+            "hazard_type": "edge_exaggeration",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": 0.0,
+            "median_iou": 0.0,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": 0.0,
+            "average_false_positive_rate": 0.0
+          },
+          "brightness_change": {
+            "hazard_type": "brightness_change",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "high_frequency_texture": {
+            "hazard_type": "high_frequency_texture",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 8,
+            "missed": 0,
+            "false_alarms": 0,
+            "average_iou": 0.771708,
+            "median_iou": 0.773894,
+            "average_pixel_precision": 0.983932,
+            "average_pixel_recall": 0.910457,
+            "average_false_positive_rate": 0.000298
+          },
+          "compression": {
+            "hazard_type": "compression",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          },
+          "illumination_variation": {
+            "hazard_type": "illumination_variation",
+            "data_classification": "SYNTHETIC_BENCHMARK",
+            "number_of_samples": 8,
+            "detected": 0,
+            "missed": 8,
+            "false_alarms": 0,
+            "average_iou": null,
+            "median_iou": null,
+            "average_pixel_precision": 0.0,
+            "average_pixel_recall": null,
+            "average_false_positive_rate": 0.0
+          }
+        },
+        "aggregates": {
+          "total_samples": 136,
+          "hazard_samples": 64,
+          "benign_samples": 72,
+          "visual_change_region_rate": 0.345588,
+          "unsupported_candidate_rate": 0.345588,
+          "average_suspicious_area_pct": 0.818987,
+          "false_positive_rate": 0.000577,
+          "false_negative_rate": 0.154649,
+          "policy_block_rate": null
+        }
+      }
+    },
+    "parameters": {
+      "seeds_per_class": 4,
+      "min_meaningful_change": 0.34,
+      "scene_level_split": {
+        "development": [
+          "scene_alpha",
+          "scene_beta"
+        ],
+        "validation": [
+          "scene_gamma",
+          "scene_delta"
+        ],
+        "held_out": [
+          "scene_epsilon",
+          "scene_zeta"
+        ]
+      },
+      "scientific_config_note": "frozen Phase-1 visual configuration (configs/stage1.json)"
+    },
+    "limitations": [
+      "Procedural scenes are synthetic visual test scenes, not lunar data.",
+      "Real-based samples use the NASA SVS rendering composite, which is not a calibrated science image.",
+      "Hazard detection is measured with the frozen Phase-1 thresholds; no ML is trained.",
+      "Metrics are computed against pixel ground truth; region-level detection uses IoU >= 0.3."
+    ]
+  },
+  "drift": {
+    "report_id": "e1c804fe6798",
+    "generated_at": "2026-08-20T08:35:34.790735+00:00",
+    "baseline": {
+      "visual_change_rate": 0.389706,
+      "suspicious_region_rate": 0.382353,
+      "unsupported_risk_mean": 0.200776,
+      "false_positive_rate": 0.000161,
+      "false_negative_rate": 0.151405,
+      "region_count_mean": 0.588235,
+      "average_changed_area_pct": 0.954855,
+      "policy_block_rate": 0.6875,
+      "version": "v1",
+      "enhancer_name": "enhancer",
+      "description": "Phase-2 bundled mild sharpening",
+      "policy_verified_samples": 16
+    },
+    "versions": {
+      "enhancer_v1": {
+        "visual_change_rate": 0.389706,
+        "suspicious_region_rate": 0.382353,
+        "unsupported_risk_mean": 0.200776,
+        "false_positive_rate": 0.000161,
+        "false_negative_rate": 0.151405,
+        "region_count_mean": 0.588235,
+        "average_changed_area_pct": 0.954855,
+        "policy_block_rate": 0.6875,
+        "version": "v1",
+        "enhancer_name": "enhancer",
+        "description": "Phase-2 bundled mild sharpening",
+        "policy_verified_samples": 16
+      },
+      "enhancer_v2": {
+        "visual_change_rate": 0.419118,
+        "suspicious_region_rate": 0.404412,
+        "unsupported_risk_mean": 0.167699,
+        "false_positive_rate": 0.002257,
+        "false_negative_rate": 0.149337,
+        "region_count_mean": 1.845588,
+        "average_changed_area_pct": 1.120932,
+        "policy_block_rate": 0.8125,
+        "version": "v2",
+        "enhancer_name": "enhancer",
+        "description": "Stronger unsharp masking",
+        "policy_verified_samples": 16
+      },
+      "enhancer_v3": {
+        "visual_change_rate": 0.169118,
+        "suspicious_region_rate": 0.169118,
+        "unsupported_risk_mean": 0.2137,
+        "false_positive_rate": 0.311658,
+        "false_negative_rate": 0.030952,
+        "region_count_mean": 1.441176,
+        "average_changed_area_pct": 6.993361,
+        "policy_block_rate": 1.0,
+        "version": "v3",
+        "enhancer_name": "enhancer",
+        "description": "Aggressive CLAHE local contrast",
+        "policy_verified_samples": 16
+      }
+    },
+    "comparisons": {
+      "enhancer_v2": {
+        "baseline_version": "v1",
+        "candidate_version": "v2",
+        "baseline_metrics": {
+          "visual_change_rate": 0.389706,
+          "suspicious_region_rate": 0.382353,
+          "unsupported_risk_mean": 0.200776,
+          "false_positive_rate": 0.000161,
+          "false_negative_rate": 0.151405,
+          "region_count_mean": 0.588235,
+          "average_changed_area_pct": 0.954855,
+          "policy_block_rate": 0.6875,
+          "enhancer_name": "enhancer",
+          "description": "Phase-2 bundled mild sharpening",
+          "policy_verified_samples": 16
+        },
+        "candidate_metrics": {
+          "visual_change_rate": 0.419118,
+          "suspicious_region_rate": 0.404412,
+          "unsupported_risk_mean": 0.167699,
+          "false_positive_rate": 0.002257,
+          "false_negative_rate": 0.149337,
+          "region_count_mean": 1.845588,
+          "average_changed_area_pct": 1.120932,
+          "policy_block_rate": 0.8125,
+          "enhancer_name": "enhancer",
+          "description": "Stronger unsharp masking",
+          "policy_verified_samples": 16
+        },
+        "percentage_changes": {
+          "visual_change_rate": 7.5472,
+          "suspicious_region_rate": 5.7693,
+          "unsupported_risk_mean": -16.4746,
+          "false_positive_rate": 1301.8634,
+          "false_negative_rate": -1.3659,
+          "region_count_mean": 213.7501,
+          "average_changed_area_pct": 17.3929,
+          "policy_block_rate": 18.1818
+        },
+        "absolute_changes": {
+          "visual_change_rate": 0.029412,
+          "suspicious_region_rate": 0.022059,
+          "unsupported_risk_mean": -0.033077,
+          "false_positive_rate": 0.002096,
+          "false_negative_rate": -0.002068,
+          "region_count_mean": 1.257353,
+          "average_changed_area_pct": 0.166077,
+          "policy_block_rate": 0.125
+        },
+        "decision": "REVIEW",
+        "reason_codes": [
+          "average_changed_area_pct:+17.39%",
+          "policy_block_rate:+18.18%",
+          "region_count_mean:+213.75%",
+          "suspicious_region_rate:+5.77%",
+          "visual_change_rate:+7.55%"
+        ],
+        "basis": "configured absolute and percentage thresholds on recorded benchmark metrics; percentage thresholds apply only when the baseline metric is >= 0.01"
+      },
+      "enhancer_v3": {
+        "baseline_version": "v1",
+        "candidate_version": "v3",
+        "baseline_metrics": {
+          "visual_change_rate": 0.389706,
+          "suspicious_region_rate": 0.382353,
+          "unsupported_risk_mean": 0.200776,
+          "false_positive_rate": 0.000161,
+          "false_negative_rate": 0.151405,
+          "region_count_mean": 0.588235,
+          "average_changed_area_pct": 0.954855,
+          "policy_block_rate": 0.6875,
+          "enhancer_name": "enhancer",
+          "description": "Phase-2 bundled mild sharpening",
+          "policy_verified_samples": 16
+        },
+        "candidate_metrics": {
+          "visual_change_rate": 0.169118,
+          "suspicious_region_rate": 0.169118,
+          "unsupported_risk_mean": 0.2137,
+          "false_positive_rate": 0.311658,
+          "false_negative_rate": 0.030952,
+          "region_count_mean": 1.441176,
+          "average_changed_area_pct": 6.993361,
+          "policy_block_rate": 1.0,
+          "enhancer_name": "enhancer",
+          "description": "Aggressive CLAHE local contrast",
+          "policy_verified_samples": 16
+        },
+        "percentage_changes": {
+          "visual_change_rate": -56.6037,
+          "suspicious_region_rate": -55.7691,
+          "unsupported_risk_mean": 6.437,
+          "false_positive_rate": 193476.3975,
+          "false_negative_rate": -79.5568,
+          "region_count_mean": 145.0,
+          "average_changed_area_pct": 632.4003,
+          "policy_block_rate": 45.4545
+        },
+        "absolute_changes": {
+          "visual_change_rate": -0.220588,
+          "suspicious_region_rate": -0.213235,
+          "unsupported_risk_mean": 0.012924,
+          "false_positive_rate": 0.311497,
+          "false_negative_rate": -0.120453,
+          "region_count_mean": 0.852941,
+          "average_changed_area_pct": 6.038506,
+          "policy_block_rate": 0.3125
+        },
+        "decision": "QUARANTINE",
+        "reason_codes": [
+          "average_changed_area_pct:+632.40%",
+          "false_negative_rate:-79.56%",
+          "false_positive_rate:+193476.40%",
+          "policy_block_rate:+45.45%",
+          "suspicious_region_rate:-55.77%",
+          "visual_change_rate:-56.60%"
+        ],
+        "basis": "configured absolute and percentage thresholds on recorded benchmark metrics; percentage thresholds apply only when the baseline metric is >= 0.01"
+      }
+    },
+    "thresholds": {
+      "visual_change_rate": {
+        "review": 20.0,
+        "quarantine": 45.0,
+        "review_abs": 0.02,
+        "quarantine_abs": 0.05
+      },
+      "suspicious_region_rate": {
+        "review": 20.0,
+        "quarantine": 45.0,
+        "review_abs": 0.02,
+        "quarantine_abs": 0.05
+      },
+      "false_positive_rate": {
+        "review": 15.0,
+        "quarantine": 35.0,
+        "review_abs": 0.01,
+        "quarantine_abs": 0.05
+      },
+      "false_negative_rate": {
+        "review": 15.0,
+        "quarantine": 35.0,
+        "review_abs": 0.1,
+        "quarantine_abs": 0.3
+      },
+      "region_count_mean": {
+        "review": 20.0,
+        "quarantine": 400.0,
+        "review_abs": 0.5,
+        "quarantine_abs": 2.5
+      },
+      "average_changed_area_pct": {
+        "review": 20.0,
+        "quarantine": 45.0,
+        "review_abs": 0.05,
+        "quarantine_abs": 0.25
+      },
+      "policy_block_rate": {
+        "review": 10.0,
+        "quarantine": 25.0,
+        "review_abs": 0.05,
+        "quarantine_abs": 0.2
+      }
+    },
+    "benchmark_samples": 136
+  }
+}
